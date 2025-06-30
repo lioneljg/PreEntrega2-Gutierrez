@@ -1,0 +1,81 @@
+/* Reset básico para que no se rompa todo en distintos navegadores */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo general del body, tipografía y color de fondo */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+    color: #333; /* Gris oscuro, tranqui a la vista */
+}
+
+/* Contenedor principal que uso para alinear el logo y el menú */
+.contenedor {
+    padding: 15px;
+    display: flex;
+    flex-direction: column; /* En celular va todo uno abajo del otro */
+    align-items: center;     /* Centrado */
+}
+
+/* Cabecera con color de fondo blanco y sombrita piola para que se destaque */
+.encabezado {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil */
+    position: sticky; /* Se queda pegado arriba al hacer scroll */
+    top: 0;
+    z-index: 1000; /* Para que esté por encima de todo */
+}
+
+/* El logo lo achico un poco para que quede bien en celu */
+.logo img {
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+/* Menú vertical para móvil, simple y al pie */
+.navegacion ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column; /* Uno abajo del otro */
+    align-items: center;
+    gap: 10px;
+}
+
+/* Links del menú con color gris oscuro y animación al pasar el mouse */
+.navegacion a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+/* Colorcito verde cuando pasás el mouse */
+.navegacion a:hover {
+    color: #2e8b57;
+}
+
+/* A partir de pantallas medianas (768px para arriba), cambiamos a horizontal */
+@media (min-width: 768px) {
+    .contenedor {
+        flex-direction: row;         /* Ahora va en fila */
+        justify-content: space-between; /* Espaciado entre logo y menú */
+    }
+
+    .logo img {
+        margin-bottom: 0;
+    }
+
+    .navegacion ul {
+        flex-direction: row; /* El menú pasa a ser horizontal */
+        gap: 20px;
+    }
+
+    .navegacion a {
+        font-size: 17px; /* Le subo un poco el tamaño en escritorio */
+    }
+}
+
