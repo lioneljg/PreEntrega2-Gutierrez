@@ -1,81 +1,289 @@
 /* Reset básico para que no se rompa todo en distintos navegadores */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-
 /* Estilo general del body, tipografía y color de fondo */
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
     background-color: #ffffff;
-    color: #333; /* Gris oscuro, tranqui a la vista */
-}
-
-/* Contenedor principal que uso para alinear el logo y el menú */
-.contenedor {
-    padding: 15px;
-    display: flex;
-    flex-direction: column; /* En celular va todo uno abajo del otro */
-    align-items: center;     /* Centrado */
-}
-
-/* Cabecera con color de fondo blanco y sombrita piola para que se destaque */
-.encabezado {
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil */
-    position: sticky; /* Se queda pegado arriba al hacer scroll */
-    top: 0;
-    z-index: 1000; /* Para que esté por encima de todo */
-}
-
-/* El logo lo achico un poco para que quede bien en celu */
-.logo img {
-    height: 50px;
-    margin-bottom: 10px;
-}
-
-/* Menú vertical para móvil, simple y al pie */
-.navegacion ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column; /* Uno abajo del otro */
-    align-items: center;
-    gap: 10px;
-}
-
-/* Links del menú con color gris oscuro y animación al pasar el mouse */
-.navegacion a {
-    text-decoration: none;
     color: #333;
-    font-weight: 600;
-    font-size: 16px;
+    overflow-x: hidden;
+    /* Evita scroll horizontal */
+}
+
+/* Paleta de colores general para reutilizar codigo si es que cuenta xD */
+:root {
+    --primario: #0277bd;
+    --secundario: #e1f5fe;
+    --blanco: #ffffff;
+    --gris: #f4f4f4;
+    --azul: blue;
+    --texto: #333;
+}
+
+/* ---------- Header personalizado ---------- */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: transparent !important; /* Fondo transparente */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Sombra sutil */
+}
+
+
+.nav-link {
+    font-weight: 500;
     transition: color 0.3s ease;
 }
 
-/* Colorcito verde cuando pasás el mouse */
-.navegacion a:hover {
-    color: #2e8b57;
+.nav-link:hover {
+    color: var(--primario); /* Color primario al hacer hover */
 }
 
-/* A partir de pantallas medianas (768px para arriba), cambiamos a horizontal */
-@media (min-width: 768px) {
-    .contenedor {
-        flex-direction: row;         /* Ahora va en fila */
-        justify-content: space-between; /* Espaciado entre logo y menú */
+/* Iconos del navbar con color personalizado al hacer hover */
+.navbar-nav .nav-item .nav-link i.bi-instagram {
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link i.bi-facebook {
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link:hover i.bi-instagram {
+  color: #e4405f; /* Color de Instagram */
+}
+
+.navbar-nav .nav-item .nav-link:hover i.bi-facebook {
+  color: #3b5998; /* Color de Facebook */
+}
+
+
+/* ---------- Hero ---------- */
+
+.hero h1 {
+    color: var(--blanco);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Texto del hero */
+.hero p {
+    color: var(--blanco);
+    font-size: 1.2rem;
+}
+
+/* Compensar el espacio con un margin en el hero */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* Oscurece la imagen para que se lea el texto */
+  z-index: 1;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+
+/* Secciones */
+section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.bg-light {
+    background-color: var(--gris) !important; /* Color de fondo claro */
+}
+
+.bg-primary {
+    background-color: var(--primario) !important; /* Color de fondo primario */
+}
+
+/* Tarjetas de servicio */
+.card-title {
+    color: var(--primario);
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Formulario de contacto */
+input,
+textarea {
+    border-radius: 0;
+    border: 1px solid #ccc;
+    padding: 0.75rem;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--primario);
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(2, 119, 189, 0.25); /* Sombra azul al enfocar */
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: var(--blanco); /* Color de texto blanco */
+    font-size: 0.9rem;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
     }
 
-    .logo img {
-        margin-bottom: 0;
+    .hero p {
+        font-size: 1rem;
     }
 
-    .navegacion ul {
-        flex-direction: row; /* El menú pasa a ser horizontal */
-        gap: 20px;
+    .nav {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero h1 {
+        font-size: 1.5rem;
     }
 
-    .navegacion a {
-        font-size: 17px; /* Le subo un poco el tamaño en escritorio */
+    .hero p {
+        font-size: 0.9rem;
     }
+
+    .nav-link {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+/* Animación de íconos al pasar el mouse */
+.icono-servicio {
+  display : inline-block; /* Asegura que el icono sea un bloque para aplicar transformaciones */
+  transition: transform 0.3s ease;
+}
+
+.icono-servicio:hover {
+  transform: scale(1.9);
+  color : var(--blanco); /* Cambia el color al pasar el mouse */
+}
+
+
+/* Efecto de fade al botón flotante */
+.btn-whatsapp {
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+/* Contenedor del botón y texto */
+.btn-whatsapp-container {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  z-index: 999;
+}
+
+/* Tooltip personalizado */
+.tooltip-ayuda {
+  position: absolute;
+  bottom: 60px;
+  left: 60px;
+  background-color: #25d366;
+  color: rgb(11, 0, 0);
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+/* Mostrar el tooltip al pasar el mouse */
+.btn-whatsapp-container:hover .tooltip-ayuda {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.redes-flotantes-top {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  z-index: 9999;
+}
+
+.btn-instagram-top,
+.btn-facebook-top {
+  background-color: #fff;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  color: #000;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-instagram-top:hover {
+  background-color: #e4405f; /* Color de Instagram */
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.btn-facebook-top:hover {
+  background-color: #3b5998; /* Color de Facebook */
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* Botón de scroll hacia arriba */
+.btn-scroll-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--primario);
+  color: rgb(255, 255, 255);
+  padding: 10px 12px;
+  border-radius: 4px;
+  font-size: 18px;
+  display: none;
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+
+/* Mostrar el botón al hacer scroll hacia abajo */
+.btn-scroll-top:hover {
+  background-color: var(--texto)
 }
 
