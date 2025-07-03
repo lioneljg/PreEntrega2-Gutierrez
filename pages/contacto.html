@@ -1,12 +1,186 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
-    <link rel="stylesheet" href="../style/estilos.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto | Hosanna</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="../style/estilos.css" />
+    <!-- Icono WhatsApp -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
+
+
 <body>
-    
+
+    <!-- HEADER -->
+    <header class="position-absolute top-0 start-0 w-100 z-3">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container d-flex justify-content-between align-items-center">
+                <!-- Logo -->
+                <div class="logo">
+                    <img src="../img/logo.png" alt="Logo de Hosanna" width="120" />
+                </div>
+
+                <!-- Menú -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuHosanna">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menuHosanna">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./empresa.html">Empresa</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
+                        <!-- Redes sociales dentro del menú -->
+                        <li class="nav-item d-flex align-items-center ms-3">
+                            <a href="https://www.instagram.com/hosanna_limpieza" target="_blank"
+                                class="nav-link p-0 me-2">
+                                <i class="bi bi-instagram fs-5"></i>
+                            </a>
+                            <a href="https://www.facebook.com/profile.php?id=61577468595512" target="_blank"
+                                class="nav-link p-0">
+                                <i class="bi bi-facebook fs-5"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        </div>
+    </header>
+
+    <!-- HERO CON FONDO -->
+    <section class="hero-contacto text-white d-flex align-items-center justify-content-center text-center"
+        style="background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url('../img/fondo-limpieza2.png') center/cover no-repeat; height: 60vh;">
+        <div>
+            <p class="text-uppercase text-info fw-bold">¿CÓMO PODEMOS AYUDARTE?</p>
+            <h1 class="display-4 fw-bold">CONTACTANOS</h1>
+        </div>
+    </section>
+
+    <!-- FORMULARIO -->
+    <section class="bg-white py-5">
+        <div class="container">
+            <h3 class="text-center text-primary fw-bold mb-4">COMPLETÁ EL FORMULARIO Y EN BREVE NOS COMUNICAREMOS CON
+                VOS</h3>
+            <form action="https://formsubmit.co/hosannalimpieza@gmail.com" method="POST" class="row g-3 mx-auto"
+                style="max-width: 800px;">
+                <!-- Campos ocultos para FormSubmit -->
+                <input type="hidden" name="_next"
+                    value="https://lioneljg.github.io/PreEntrega2-Gutierrez/pages/agradecimiento.html">
+                <input type="hidden" name="_captcha" value="false">
+
+                <div class="col-md-6">
+                    <input type="text" class="form-control" placeholder="Nombre" required>
+                </div>
+                <div class="col-md-6">
+                    <input type="text" class="form-control" placeholder="Apellido" required>
+                </div>
+                <div class="col-md-6">
+                    <input type="tel" class="form-control" placeholder="Teléfono">
+                </div>
+                <div class="col-md-6">
+                    <input type="email" class="form-control" placeholder="Correo electrónico" required>
+                </div>
+                <div class="col-12">
+                    <textarea class="form-control" rows="5" placeholder="Mensaje" required></textarea>
+                </div>
+                <div class="col-12">
+                    <label class="form-label text-primary">¿En qué producto estás interesado?</label>
+                    <select class="form-select">
+                        <option selected disabled>Seleccionar</option>
+                        <option>Limpieza</option>
+                        <option>Desinfección</option>
+                        <option>Consorcios</option>
+                    </select>
+                </div>
+                <div class="col-12">
+                    <label class="form-label text-primary">¿Por dónde nos conociste?</label><br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="Internet">
+                        <label class="form-check-label">Internet</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="Publicidad">
+                        <label class="form-check-label">Publicidad</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="Redes">
+                        <label class="form-check-label">Redes</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="Recomendación">
+                        <label class="form-check-label">Recomendación</label>
+                    </div>
+                </div>
+                <div class="col-12 text-center">
+                    <button type="submit" class="btn btn-primary px-5 mt-3">
+                        <i class="bi bi-envelope-fill"></i> ENVIAR
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- MAPA + INFO -->
+    <section class="bg-light py-5">
+        <div class="container">
+            <div class="row align-items-start text-center text-md-start">
+                <div class="col-md-4 mb-4">
+                    <img src="../img/logo.png" alt="Logo Hosanna" width="120" class="mb-3" />
+                    <p>Somos una empresa dedicada a la prestación de servicios de limpieza y mantenimiento general.
+                        Nuestro objetivo es dar la solución que nuestros clientes necesitan.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-primary">DÓNDE NOS ENCONTRAMOS</h5>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.456874149015!2d-58.40257102362291!3d-34.61789307294934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccae1545165f7%3A0x72459697f7617365!2sMatheu%20744%2C%20C1219AAD%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1751322394105!5m2!1ses-419!2sar"
+                        width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-primary">INFORMACIÓN DE CONTACTO</h5>
+                    <p>Matheu 744 1219 Buenos Aires, Argentina</p>
+                    <p>+54 1157966449</p>
+                    <p>HOSANNALIMPIEZA@GMAIL.COM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOTÓN WHATSAPP FLOTANTE -->
+    <div class="btn-whatsapp-container">
+        <a href="https://wa.me/541157966449" target="_blank"
+            class="btn btn-success rounded-circle position-fixed bottom-0 start-0 m-4 shadow btn-whatsapp"
+            style="z-index:999; width: 50px; height: 50px;">
+            <i class="bi bi-whatsapp fs-4 d-flex align-items-center justify-content-center"></i>
+        </a>
+        <span class="tooltip-ayuda">¿Necesitás ayuda?</span>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-primary text-white text-center py-3 footer-observado">
+        <div class="container">
+            <p class="mb-0">&copy; Hosanna 2025 - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <!-- Botón "ir arriba" -->
+    <a href="#" class="btn-scroll-top">
+        <i class="bi bi-chevron-up"></i>
+    </a>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../js/scroll-top.js"></script>
+    <script src="../js/whatsapp.js"></script>
 </body>
+
 </html>
