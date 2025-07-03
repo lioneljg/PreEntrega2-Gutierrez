@@ -184,7 +184,7 @@ footer {
       height: 40px;
     }
     .btn-whatsapp i {
-      font-size: 1.2rem;
+      font-size: 1.5rem;
     }
 }
 
@@ -204,6 +204,9 @@ footer {
 
 /* Efecto de fade al botón flotante */
 .btn-whatsapp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
 }
 
