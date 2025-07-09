@@ -1,48 +1,52 @@
+@charset "UTF-8";
 /* Reset básico para que no se rompa todo en distintos navegadores */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 /* Estilo general del body, tipografía y color de fondo */
 body {
-    font-family: 'Segoe UI', sans-serif;
-    line-height: 1.6;
-    background-color: #ffffff;
-    color: #333;
-    overflow-x: hidden;
-    /* Evita scroll horizontal */
+  font-family: "Segoe UI", sans-serif;
+  line-height: 1.6;
+  background-color: #ffffff;
+  color: #333;
+  overflow-x: hidden;
+  /* Evita scroll horizontal */
 }
 
 /* Paleta de colores general para reutilizar codigo si es que cuenta xD */
 :root {
-    --primario: #0277bd;
-    --secundario: #e1f5fe;
-    --blanco: #ffffff;
-    --gris: #f4f4f4;
-    --azul: blue;
-    --texto: #333;
+  --primario: #0277bd;
+  --secundario: #e1f5fe;
+  --blanco: #ffffff;
+  --gris: #f4f4f4;
+  --azul: blue;
+  --texto: #333;
 }
 
 /* ---------- Header personalizado ---------- */
 header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10;
-    background-color: transparent !important; /* Fondo transparente */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Sombra sutil */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: transparent !important;
+  /* Fondo transparente */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  /* Sombra sutil */
 }
 
-
 .nav-link {
-    font-weight: 500;
-    transition: color 0.3s ease;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-    color: var(--primario); /* Color primario al hacer hover */
+  color: var(--primario);
+  /* Color primario al hacer hover */
 }
 
 /* Iconos del navbar con color personalizado al hacer hover */
@@ -55,29 +59,28 @@ header {
 }
 
 .navbar-nav .nav-item .nav-link:hover i.bi-instagram {
-  color: #e4405f; /* Color de Instagram */
+  color: #e4405f;
+  /* Color de Instagram */
 }
 
 .navbar-nav .nav-item .nav-link:hover i.bi-facebook {
-  color: #3b5998; /* Color de Facebook */
+  color: #3b5998;
+  /* Color de Facebook */
 }
 
-
 /* ---------- Hero ---------- */
-
 .hero h1 {
-    color: var(--blanco);
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  color: var(--blanco);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
 }
 
 /* Texto del hero */
 .hero p {
-    color: var(--blanco);
-    font-size: 1.2rem;
+  color: var(--blanco);
+  font-size: 1.2rem;
 }
 
 /* Compensar el espacio con un margin en el hero */
-
 .hero {
   position: relative;
   min-height: 100vh;
@@ -94,7 +97,8 @@ header {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4); /* Oscurece la imagen para que se lea el texto */
+  background: rgba(0, 0, 0, 0.4);
+  /* Oscurece la imagen para que se lea el texto */
   z-index: 1;
 }
 
@@ -106,62 +110,67 @@ header {
 
 /* Secciones */
 section {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 .bg-light {
-    background-color: var(--gris) !important; /* Color de fondo claro */
+  background-color: var(--gris) !important;
+  /* Color de fondo claro */
 }
 
 .bg-primary {
-    background-color: var(--primario) !important; /* Color de fondo primario */
+  background-color: var(--primario) !important;
+  /* Color de fondo primario */
 }
 
 /* Tarjetas de servicio */
 .card-title {
-    color: var(--primario);
-    font-weight: bold;
+  color: var(--primario);
+  font-weight: bold;
 }
 
 .card-text {
-    font-size: 0.95rem;
-    color: #555;
+  font-size: 0.95rem;
+  color: #555;
 }
 
 /* Formulario de contacto */
 input,
 textarea {
-    border-radius: 0;
-    border: 1px solid #ccc;
-    padding: 0.75rem;
+  border-radius: 0;
+  border: 1px solid #ccc;
+  padding: 0.75rem;
 }
 
 input:focus,
 textarea:focus {
-    border-color: var(--primario);
-    outline: none;
-    box-shadow: 0 0 0 0.2rem rgba(2, 119, 189, 0.25); /* Sombra azul al enfocar */
+  border-color: var(--primario);
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(2, 119, 189, 0.25);
+  /* Sombra azul al enfocar */
 }
 
 /* Footer */
 footer {
-    background-color: #222;
-    color: var(--blanco); /* Color de texto blanco */
-    font-size: 0.9rem;
+  background-color: #222;
+  color: var(--blanco);
+  /* Color de texto blanco */
+  font-size: 0.9rem;
 }
 
 /* Animación de íconos al pasar el mouse */
 .icono-servicio {
-  display : inline-block; /* Asegura que el icono sea un bloque para aplicar transformaciones */
+  display: inline-block;
+  /* Asegura que el icono sea un bloque para aplicar transformaciones */
   transition: transform 0.3s ease;
 }
 
 .icono-servicio:hover {
   transform: scale(1.9);
-  color : var(--blanco); /* Cambia el color al pasar el mouse */
+  color: var(--blanco);
+  /* Cambia el color al pasar el mouse */
 }
-
 
 /* Efecto de fade al botón flotante */
 .btn-whatsapp {
@@ -227,13 +236,15 @@ footer {
 }
 
 .btn-instagram-top:hover {
-  background-color: #e4405f; /* Color de Instagram */
+  background-color: #e4405f;
+  /* Color de Instagram */
   color: #fff;
   transform: scale(1.1);
 }
 
 .btn-facebook-top:hover {
-  background-color: #3b5998; /* Color de Facebook */
+  background-color: #3b5998;
+  /* Color de Facebook */
   color: #fff;
   transform: scale(1.1);
 }
@@ -255,44 +266,39 @@ footer {
 
 /* Mostrar el botón al hacer scroll hacia abajo */
 .btn-scroll-top:hover {
-  background-color: var(--texto)
+  background-color: var(--texto);
 }
 
 /* responsive */
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    .nav {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
-
 @media (max-width: 576px) {
-    .hero h1 {
-        font-size: 1.5rem;
-    }
-
-    .hero p {
-        font-size: 0.9rem;
-    }
-
-    .nav-link {
-        font-size: 0.9rem;
-    }
-    .btn-whatsapp {
-      width: 40px;
-      height: 40px;
-    }
-    .btn-whatsapp i {
-      font-size: 1.5rem;
-    }
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+  .hero p {
+    font-size: 0.9rem;
+  }
+  .nav-link {
+    font-size: 0.9rem;
+  }
+  .btn-whatsapp {
+    width: 40px;
+    height: 40px;
+  }
+  .btn-whatsapp i {
+    font-size: 1.5rem;
+  }
 }
 
-
+/*# sourceMappingURL=estilos.css.map */
