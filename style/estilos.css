@@ -1,31 +1,4 @@
 @charset "UTF-8";
-/* Reset básico para que no se rompa todo en distintos navegadores */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Estilo general del body, tipografía y color de fondo */
-body {
-  font-family: "Segoe UI", sans-serif;
-  line-height: 1.6;
-  background-color: #ffffff;
-  color: #333;
-  overflow-x: hidden;
-  /* Evita scroll horizontal */
-}
-
-/* Paleta de colores general para reutilizar codigo si es que cuenta xD */
-:root {
-  --primario: #0277bd;
-  --secundario: #e1f5fe;
-  --blanco: #ffffff;
-  --gris: #f4f4f4;
-  --azul: blue;
-  --texto: #333;
-}
-
 /* ---------- Header personalizado ---------- */
 header {
   position: absolute;
@@ -66,6 +39,33 @@ header {
 .navbar-nav .nav-item .nav-link:hover i.bi-facebook {
   color: #3b5998;
   /* Color de Facebook */
+}
+
+/* Reset básico para que no se rompa todo en distintos navegadores */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo general del body, tipografía y color de fondo */
+body {
+  font-family: "Segoe UI", sans-serif;
+  line-height: 1.6;
+  background-color: #ffffff;
+  color: #333;
+  overflow-x: hidden;
+  /* Evita scroll horizontal */
+}
+
+/* Paleta de colores general para reutilizar codigo si es que cuenta xD */
+:root {
+  --primario: #0277bd;
+  --secundario: #e1f5fe;
+  --blanco: #ffffff;
+  --gris: #f4f4f4;
+  --azul: blue;
+  --texto: #333;
 }
 
 /* ---------- Hero ---------- */
@@ -135,6 +135,76 @@ section {
   color: #555;
 }
 
+/* Footer */
+footer {
+  background-color: #222;
+  font-size: 0.9rem;
+}
+
+/* ---------- Hero ---------- */
+.hero h1 {
+  color: var(--blanco);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Texto del hero */
+.hero p {
+  color: var(--blanco);
+  font-size: 1.2rem;
+}
+
+/* Compensar el espacio con un margin en el hero */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  /* Oscurece la imagen para que se lea el texto */
+  z-index: 1;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+
+/* Tarjetas de servicio */
+.card-title {
+  color: var(--primario);
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Animación de íconos al pasar el mouse */
+.icono-servicio {
+  display: inline-block;
+  /* Asegura que el icono sea un bloque para aplicar transformaciones */
+  transition: transform 0.3s ease;
+}
+
+.icono-servicio:hover {
+  transform: scale(1.9);
+  color: var(--blanco);
+  /* Cambia el color al pasar el mouse */
+}
+
 /* Formulario de contacto */
 input,
 textarea {
@@ -149,27 +219,6 @@ textarea:focus {
   outline: none;
   box-shadow: 0 0 0 0.2rem rgba(2, 119, 189, 0.25);
   /* Sombra azul al enfocar */
-}
-
-/* Footer */
-footer {
-  background-color: #222;
-  color: var(--blanco);
-  /* Color de texto blanco */
-  font-size: 0.9rem;
-}
-
-/* Animación de íconos al pasar el mouse */
-.icono-servicio {
-  display: inline-block;
-  /* Asegura que el icono sea un bloque para aplicar transformaciones */
-  transition: transform 0.3s ease;
-}
-
-.icono-servicio:hover {
-  transform: scale(1.9);
-  color: var(--blanco);
-  /* Cambia el color al pasar el mouse */
 }
 
 /* Efecto de fade al botón flotante */
@@ -211,6 +260,26 @@ footer {
   transform: translateX(0);
 }
 
+/* Botón de scroll hacia arriba */
+.btn-scroll-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--primario);
+  color: rgb(255, 255, 255);
+  padding: 10px 12px;
+  border-radius: 4px;
+  font-size: 18px;
+  display: none;
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+
+/* Mostrar el botón al hacer scroll hacia abajo */
+.btn-scroll-top:hover {
+  background-color: var(--texto);
+}
+
 .redes-flotantes-top {
   position: fixed;
   top: 1rem;
@@ -249,26 +318,6 @@ footer {
   transform: scale(1.1);
 }
 
-/* Botón de scroll hacia arriba */
-.btn-scroll-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: var(--primario);
-  color: rgb(255, 255, 255);
-  padding: 10px 12px;
-  border-radius: 4px;
-  font-size: 18px;
-  display: none;
-  z-index: 999;
-  transition: all 0.3s ease;
-}
-
-/* Mostrar el botón al hacer scroll hacia abajo */
-.btn-scroll-top:hover {
-  background-color: var(--texto);
-}
-
 /* responsive */
 @media (max-width: 768px) {
   .hero h1 {
@@ -299,6 +348,21 @@ footer {
   .btn-whatsapp i {
     font-size: 1.5rem;
   }
+}
+/* Secciones */
+section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.bg-light {
+  background-color: var(--gris) !important;
+  /* Color de fondo claro */
+}
+
+.bg-primary {
+  background-color: var(--primario) !important;
+  /* Color de fondo primario */
 }
 
 /*# sourceMappingURL=estilos.css.map */

@@ -1,0 +1,23 @@
+/* Tarjetas de servicio */
+.card-title {
+    color: var(--primario);
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Animación de íconos al pasar el mouse */
+.icono-servicio {
+    display: inline-block;
+    /* Asegura que el icono sea un bloque para aplicar transformaciones */
+    transition: transform 0.3s ease;
+}
+
+.icono-servicio:hover {
+    transform: scale(1.9);
+    color: var(--blanco);
+    /* Cambia el color al pasar el mouse */
+}
