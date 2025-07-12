@@ -12,6 +12,21 @@ header {
   /* Sombra sutil */
 }
 
+/* Logo  y animacion */
+.logo {
+    transition: transform 0.3s ease, filter 0.3s ease; /* Animación suave */
+}
+
+.logo:hover {
+    transform: scale(1.5); /* Aumenta el tamaño al hacer hover */
+    filter: brightness(1.2); /* Aumenta el brillo */
+}
+
+.logo:active {
+    transform: scale(0.95); /* Hace un pequeño "press" */
+}
+
+
 .nav-link {
   font-weight: 500;
   transition: color 0.3s ease;
@@ -22,24 +37,25 @@ header {
   /* Color primario al hacer hover */
 }
 
-/* Iconos del navbar con color personalizado al hacer hover */
-.navbar-nav .nav-item .nav-link i.bi-instagram {
-  transition: color 0.3s ease;
-}
-
+/* Transición y escala para los íconos */
+.navbar-nav .nav-item .nav-link i.bi-instagram,
 .navbar-nav .nav-item .nav-link i.bi-facebook {
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
 }
 
+/* Hover Instagram */
 .navbar-nav .nav-item .nav-link:hover i.bi-instagram {
   color: #e4405f;
-  /* Color de Instagram */
+  transform: scale(1.5);
 }
 
+/* Hover Facebook */
 .navbar-nav .nav-item .nav-link:hover i.bi-facebook {
   color: #3b5998;
-  /* Color de Facebook */
+  transform: scale(1.5);
 }
+
 
 /* Reset básico para que no se rompa todo en distintos navegadores */
 * {
@@ -70,13 +86,11 @@ body {
 
 /* ---------- Hero ---------- */
 .hero h1 {
-  color: var(--blanco);
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
 }
 
 /* Texto del hero */
 .hero p {
-  color: var(--blanco);
   font-size: 1.2rem;
 }
 
@@ -124,16 +138,6 @@ section {
   /* Color de fondo primario */
 }
 
-/* Tarjetas de servicio */
-.card-title {
-  color: var(--primario);
-  font-weight: bold;
-}
-
-.card-text {
-  font-size: 0.95rem;
-  color: #555;
-}
 
 /* Footer */
 footer {
@@ -141,56 +145,6 @@ footer {
   font-size: 0.9rem;
 }
 
-/* ---------- Hero ---------- */
-.hero h1 {
-  color: var(--blanco);
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
-}
-
-/* Texto del hero */
-.hero p {
-  color: var(--blanco);
-  font-size: 1.2rem;
-}
-
-/* Compensar el espacio con un margin en el hero */
-.hero {
-  position: relative;
-  min-height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 1rem;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.4);
-  /* Oscurece la imagen para que se lea el texto */
-  z-index: 1;
-}
-
-.hero .container {
-  position: relative;
-  z-index: 2;
-  color: white;
-}
-
-/* Tarjetas de servicio */
-.card-title {
-  color: var(--primario);
-  font-weight: bold;
-}
-
-.card-text {
-  font-size: 0.95rem;
-  color: #555;
-}
 
 /* Animación de íconos al pasar el mouse */
 .icono-servicio {
@@ -240,8 +194,8 @@ textarea:focus {
 /* Tooltip personalizado */
 .tooltip-ayuda {
   position: absolute;
-  bottom: 60px;
-  left: 60px;
+  bottom: 40px;
+  left: 40px;
   background-color: #25d366;
   color: rgb(11, 0, 0);
   padding: 6px 12px;
@@ -278,44 +232,6 @@ textarea:focus {
 /* Mostrar el botón al hacer scroll hacia abajo */
 .btn-scroll-top:hover {
   background-color: var(--texto);
-}
-
-.redes-flotantes-top {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  z-index: 9999;
-}
-
-.btn-instagram-top,
-.btn-facebook-top {
-  background-color: #fff;
-  border-radius: 50%;
-  width: 42px;
-  height: 42px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  color: #000;
-  transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-.btn-instagram-top:hover {
-  background-color: #e4405f;
-  /* Color de Instagram */
-  color: #fff;
-  transform: scale(1.1);
-}
-
-.btn-facebook-top:hover {
-  background-color: #3b5998;
-  /* Color de Facebook */
-  color: #fff;
-  transform: scale(1.1);
 }
 
 /* responsive */

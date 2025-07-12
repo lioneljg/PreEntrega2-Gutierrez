@@ -11,6 +11,17 @@ header {
     /* Sombra sutil */
 }
 
+/* Logo  y animacion */
+.logo {
+    transition: transform 0.3s ease, filter 0.3s ease; /* Animación suave */
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al hacer hover */
+    filter: brightness(1.2); /* Aumenta el brillo */
+}
+
+
 .nav-link {
     font-weight: 500;
     transition: color 0.3s ease;
