@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios | Hosanna</title>
+    <meta name="description"
+        content="Ofrecemos una amplia gama de servicios de limpieza profesional: oficinas, consorcios, eventos, industrias, finales de obra y más. Soluciones a medida para cada cliente.">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../img/favicon.png" type="image/png" />
+
+    <!-- CSS linkeado -->
+    <link rel="stylesheet" href="../style/style.css" />
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="position-absolute top-0 start-0 w-100 z-3">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container d-flex justify-content-between align-items-center">
+                <!-- Logo -->
+                <a href="../index.html" class="logo-link">
+                    <div class="logo">
+                        <img src="../img/logo.png" alt="Logo de Hosanna" width="120" />
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuHosanna">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menuHosanna">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./empresa.html">Empresa</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./servicios.html">Servicios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./galeria.html">Galeria</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
+                        <li class="nav-item d-flex align-items-center ms-5">
+                            <a href="https://www.instagram.com/hosanna_limpieza" target="_blank"
+                                class="nav-link p-0 me-3">
+                                <i class="bi bi-instagram fs-5"></i>
+                            </a>
+                            <a href="https://www.facebook.com/profile.php?id=61577468595512" target="_blank"
+                                class="nav-link p-0">
+                                <i class="bi bi-facebook fs-5"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" style="background-image: url('../img/fondo-limpieza5.png');">
+        <div class="container text-white text-start">
+            <p class="lead text-info fw-semibold">SOLUCIONES DE LIMPIEZA PARA CADA NECESIDAD</p>
+            <h1 class="display-4 fw-bold">NUESTROS SERVICIOS</h1>
+        </div>
+    </section>
+
+    <!-- DETALLE DE SERVICIOS -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h3 class="text-primary fw-bold">EXPLORÁ NUESTRAS SOLUCIONES DE LIMPIEZA</h3>
+                <p class="lead">Nos adaptamos a tus requerimientos con profesionalismo y productos de primera calidad.
+                </p>
+            </div>
+
+            <div class="row g-5 align-items-center">
+                <!-- Servicio 1 -->
+                <div class="col-md-7">
+                    <h4 class="fw-bold">Oficinas, Locales y Empresas</h4>
+                    <p>Un ambiente de trabajo limpio y ordenado es fundamental para la productividad y para proyectar una imagen profesional. Ofrecemos planes de mantenimiento diarios, semanales o mensuales, adaptados al tamaño y flujo de tu negocio.</p>
+                </div>
+                <div class="col-md-5">
+                    <img src="../img/soluciones.png" alt="Limpieza de oficinas" class="img-fluid rounded shadow">
+                </div>
+
+                <!-- Servicio 2 -->
+                <div class="col-md-7 order-md-2">
+                    <h4 class="fw-bold">Consorcios y Edificios</h4>
+                    <p>Mantenemos las áreas comunes de tu edificio en perfectas condiciones. Nos encargamos de la limpieza de pasillos, escaleras, ascensores, halls de entrada y amenities, garantizando un espacio agradable y seguro para todos los residentes.</p>
+                </div>
+                <div class="col-md-5 order-md-1">
+                    <img src="../img/fondo-limpieza3.png" alt="Limpieza de consorcios" class="img-fluid rounded shadow">
+                </div>
+
+                <!-- Servicio 3 -->
+                <div class="col-md-7">
+                    <h4 class="fw-bold">Industrias, Depósitos y Galpones</h4>
+                    <p>Contamos con la maquinaria y el personal especializado para la limpieza de grandes superficies. Realizamos limpiezas profundas en naves industriales, depósitos y galpones, cumpliendo con los estándares de seguridad e higiene.</p>
+                </div>
+                <div class="col-md-5">
+                    <img src="../img/empresa-banner.jpg" alt="Limpieza industrial" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-dark text-white py-5">
+        <div class="container text-center">
+            <h3 class="text-info fw-bold">¿NECESITÁS UNA LIMPIEZA ESPECIAL?</h3>
+            <p class="lead my-3">También realizamos limpiezas de final de obra, pre-mudanza, eventos y más. <br>Cada espacio es un mundo, y nosotros tenemos una solución para él.</p>
+            <a href="./contacto.html" class="btn btn-primary btn-lg mt-2">Solicitar Presupuesto</a>
+        </div>
+    </section>
+
+    <!-- BOTÓN WHATSAPP FLOTANTE -->
+    <div class="btn-whatsapp-container">
+        <a href="https://wa.me/541157966449" target="_blank"
+            class="btn btn-success rounded-circle position-fixed bottom-0 start-0 m-4 shadow btn-whatsapp"
+            style="z-index:999; width: 50px; height: 50px;">
+            <i class="bi bi-whatsapp fs-4 d-flex align-items-center justify-content-center"></i>
+        </a>
+        <span class="tooltip-ayuda">¿Necesitás ayuda?</span>
+    </div>
+
+    <!-- Botón "ir arriba" -->
+    <a href="#" class="btn btn-primary rounded-pill position-fixed bottom-0 end-0 m-4 shadow btn-scroll-top align-items-center" style="z-index: 998;">
+        <i class="bi bi-chevron-up"></i>
+        <span>Volver arriba</span>
+    </a>
+
+    <!-- FOOTER -->
+    <footer class="bg-primary text-white text-center py-3 footer-observado">
+        <div class="container">
+            <p class="mb-0">&copy; Hosanna 2025 - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/floating-buttons.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería | Hosanna</title>
+    <meta name="description"
+        content="Explorá nuestra galería de trabajos. Mirá imágenes de nuestro equipo, maquinaria y los resultados impecables que ofrecemos en cada servicio de limpieza.">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../img/favicon.png" type="image/png" />
+
+    <!-- CSS linkeado -->
+    <link rel="stylesheet" href="../style/style.css" />
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="position-absolute top-0 start-0 w-100 z-3">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container d-flex justify-content-between align-items-center">
+                <!-- Logo -->
+                <a href="../index.html" class="logo-link">
+                    <div class="logo">
+                        <img src="../img/logo.png" alt="Logo de Hosanna" width="120" />
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuHosanna">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menuHosanna">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./empresa.html">Empresa</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./servicios.html">Servicios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./galeria.html">Galería</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
+                        <li class="nav-item d-flex align-items-center ms-5">
+                            <a href="https://www.instagram.com/hosanna_limpieza" target="_blank"
+                                class="nav-link p-0 me-3">
+                                <i class="bi bi-instagram fs-5"></i>
+                            </a>
+                            <a href="https://www.facebook.com/profile.php?id=61577468595512" target="_blank"
+                                class="nav-link p-0">
+                                <i class="bi bi-facebook fs-5"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" style="background-image: url('../img/fondo-limpieza2.png');">
+        <div class="container text-white text-center">
+            <p class="lead text-info fw-semibold">CALIDAD Y PROFESIONALISMO EN IMÁGENES</p>
+            <h1 class="display-4 fw-bold">NUESTRA GALERÍA</h1>
+        </div>
+    </section>
+
+    <!-- GALERÍA DE IMÁGENES -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h3 class="text-primary fw-bold">UN VISTAZO A NUESTRO TRABAJO</h3>
+                <p class="lead">Resultados que hablan por sí mismos. Así trabajamos en Hosanna.</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Imagen 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="gallery-item">
+                        <img src="../img/teamhosanna.jpg" alt="Personal trabajando en limpieza industrial" class="img-fluid">
+                    </div>
+                </div>
+                <!-- Imagen 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="gallery-item">
+                        <img src="../img/galeria1.jpg" alt="Limpieza de oficinas modernas" class="img-fluid">
+                    </div>
+                </div>
+                <!-- Imagen 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="gallery-item">
+                        <img src="../img/fondo-limpieza3.png" alt="Detalle de limpieza en consorcio" class="img-fluid">
+                    </div>
+                </div>
+                <!-- Imagen 4 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="gallery-item">
+                        <img src="../img/fondo-limpieza.png" alt="Maquinaria de limpieza profesional" class="img-fluid">
+                    </div>
+                </div>
+                <!-- Imagen 5 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="gallery-item">
+                        <img src="../img/fondo-limpieza5.png" alt="Equipo de limpieza en acción" class="img-fluid">
+                    </div>
+                </div>
+                <!-- Imagen 6 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="gallery-item">
+                        <img src="../img/fondo-limpieza2.png" alt="Espacio de trabajo impecable" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-dark text-white py-5">
+        <div class="container text-center">
+            <h3 class="text-info fw-bold">¿TE GUSTÓ LO QUE VISTE?</h3>
+            <p class="lead my-3">Permitinos demostrarte cómo podemos transformar tu espacio.</p>
+            <a href="./contacto.html" class="btn btn-primary btn-lg mt-2">Pedí tu presupuesto ahora</a>
+        </div>
+    </section>
+
+    <!-- BOTONES FLOTANTES Y FOOTER -->
+    <div class="btn-whatsapp-container"><a href="https://wa.me/541157966449" target="_blank" class="btn btn-success rounded-circle position-fixed bottom-0 start-0 m-4 shadow btn-whatsapp" style="z-index:999; width: 50px; height: 50px;"><i class="bi bi-whatsapp fs-4 d-flex align-items-center justify-content-center"></i></a><span class="tooltip-ayuda">¿Necesitás ayuda?</span></div>
+    <a href="#" class="btn btn-primary rounded-pill position-fixed bottom-0 end-0 m-4 shadow btn-scroll-top align-items-center" style="z-index: 998;"><i class="bi bi-chevron-up"></i><span>Volver arriba</span></a>
+    <footer class="bg-primary text-white text-center py-3 footer-observado">
+        <div class="container">
+            <p class="mb-0">&copy; Hosanna 2025 - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/floating-buttons.js"></script>
+</body>
+
+</html>

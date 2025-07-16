@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 /* ---------- Header personalizado ---------- */
 header {
   position: absolute;
@@ -12,28 +13,48 @@ header {
   /* Sombra sutil */
 }
 
+header .container {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-top: 0 !important;
+}
+
 /* Logo  y animacion */
 .logo {
-    transition: transform 0.3s ease, filter 0.3s ease; /* Animación suave */
+  transition: transform 0.3s ease, filter 0.3s ease;
+  /* Animación suave */
 }
 
 .logo:hover {
-    transform: scale(1.5); /* Aumenta el tamaño al hacer hover */
-    filter: brightness(1.2); /* Aumenta el brillo */
+  transform: scale(1.5);
+  /* Aumenta el tamaño al hacer hover */
+  filter: brightness(1.2);
+  /* Aumenta el brillo */
 }
 
 .logo:active {
-    transform: scale(0.95); /* Hace un pequeño "press" */
+  transform: scale(0.95);
+  /* Hace un pequeño "press" */
 }
 
 
+.navbar {
+  background-color: transparent !important;
+  /* Fondo transparente */
+}
+
 .nav-link {
-  font-weight: 500;
-  transition: color 0.3s ease;
+  font-weight: 500;  
+  color: var(--blanco);
+  font-size: 1.3rem; /* Aumenta el tamaño de la fuente */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  transition: color 0.3s ease, transform 0.3s ease; /* Transición unificada */
+  display: inline-block; /* Necesario para que funcione el transform */
 }
 
 .nav-link:hover {
   color: var(--primario);
+  transform: translateY(-2px); /* Efecto de "levantamiento" sutil */
   /* Color primario al hacer hover */
 }
 
@@ -46,14 +67,14 @@ header {
 
 /* Hover Instagram */
 .navbar-nav .nav-item .nav-link:hover i.bi-instagram {
-  color: #e4405f;
-  transform: scale(1.5);
+  color: #e4405f; /* Color de marca */
+  transform: translateY(-2px) scale(1.2); /* Efecto combinado y más sutil */
 }
 
 /* Hover Facebook */
 .navbar-nav .nav-item .nav-link:hover i.bi-facebook {
-  color: #3b5998;
-  transform: scale(1.5);
+  color: #3b5998; /* Color de marca */
+  transform: translateY(-2px) scale(1.2); /* Efecto combinado y más sutil */
 }
 
 
@@ -64,13 +85,20 @@ header {
   box-sizing: border-box;
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 /* Estilo general del body, tipografía y color de fondo */
 body {
   font-family: "Segoe UI", sans-serif;
   line-height: 1.6;
   background-color: #ffffff;
   color: #333;
-  overflow-x: hidden;
+  padding-top: 0;
   /* Evita scroll horizontal */
 }
 
@@ -84,42 +112,139 @@ body {
   --texto: #333;
 }
 
+/* responsivo sin media queries */
+h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+h2 {
+  font-size: clamp(1.8rem, 4.5vw, 3rem);
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+}
+
+h4 {
+  font-size: clamp(1.3rem, 3vw, 2rem);
+}
+
+h5 {
+  font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+}
+
+h6 {
+  font-size: clamp(1rem, 2vw, 1.4rem);
+}
+
+
+
 /* ---------- Hero ---------- */
-.hero h1 {
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+/* Títulos del Hero (h1, h2) */
+.hero h1,
+.hero h2 {
+  /* 
+   * Se usa clamp() para un tamaño de fuente fluido.
+   * Mínimo: 1.8rem (para móviles pequeños)
+   * Preferido: Crecerá con el ancho de la pantalla (5vw) con una base de 0.5rem.
+   * Máximo: 3rem (para pantallas grandes)
+   */
+  font-size: clamp(1.8rem, calc(5vw + 0.5rem), 3rem);
 }
 
-/* Texto del hero */
+/* Párrafos del Hero (p, .lead) */
 .hero p {
-  font-size: 1.2rem;
+  /*
+   * El párrafo también usa clamp() para escalar suavemente.
+   * Mínimo: 0.9rem
+   * Preferido: Escala más sutilmente que los títulos.
+   * Máximo: 1.2rem
+   */
+  font-size: clamp(0.9rem, calc(1vw + 0.7rem), 1.2rem);
+  margin-bottom: 1.5rem; /* Espacio consistente debajo del párrafo */
 }
 
-/* Compensar el espacio con un margin en el hero */
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 100dvh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 1rem;
+  z-index: 1;
+  padding: 0;
 }
 
 .hero::before {
   content: "";
   position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.4);
-  /* Oscurece la imagen para que se lea el texto */
-  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  /* Asegura que el fondo esté detrás del contenido */
 }
+
+#hero-carousel {
+  position: relative;
+  height: 100dvh !important;
+}
+
+#hero-carousel .carousel-inner,
+#hero-carousel .carousel-item,
+#hero-carousel .carousel-item img {
+  height: 100% !important;
+}
+
+#hero-carousel .carousel-item img {
+  object-fit: cover;
+  width: 100%;
+  filter: brightness(0.7); /* Oscurece SOLO la imagen, no el header */
+}
+
+#hero-carousel .carousel-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  border-radius: 8px;
+  /* 
+   * Se ajusta el ancho y el padding para mejorar la legibilidad
+   * en todas las pantallas. 'min' previene que el texto se extienda
+   * demasiado en pantallas anchas y '90%' asegura que no toque
+   * los bordes en las más pequeñas.
+   */
+  width: min(90%, 800px);
+  padding: clamp(1rem, 5vw, 2rem);
+}
+
+#hero-carousel > header {
+  pointer-events: none;
+}
+
+/* Hacemos que la barra de navegación sí sea clickeable */
+#hero-carousel > header .navbar {
+  pointer-events: auto;
+}
+
+#hero-carousel .carousel-caption h1,
+#hero-carousel .carousel-caption h2,
+#hero-carousel .carousel-caption p {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+
 
 .hero .container {
   position: relative;
   z-index: 2;
   color: white;
+  padding: min(5em, 8%);
 }
 
 /* Secciones */
@@ -204,81 +329,123 @@ textarea:focus {
   white-space: nowrap;
   opacity: 0;
   transform: translateX(-10px);
-  transition: all 0.3s ease-in-out;
+  transition: opacity 0.4s ease, transform 0.4s ease;
   pointer-events: none;
 }
 
-/* Mostrar el tooltip al pasar el mouse */
-.btn-whatsapp-container:hover .tooltip-ayuda {
+/* Clase que activa el tooltip desde JS */
+.tooltip-ayuda.is-active {
   opacity: 1;
   transform: translateX(0);
 }
 
-/* Botón de scroll hacia arriba */
-.btn-scroll-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: var(--primario);
-  color: rgb(255, 255, 255);
-  padding: 10px 12px;
-  border-radius: 4px;
-  font-size: 18px;
-  display: none;
-  z-index: 999;
-  transition: all 0.3s ease;
+/* Ocultar ambos botones por defecto y prepararlos para la transición */
+.btn-scroll-top,
+.btn-whatsapp {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.8); /* Un pequeño efecto de zoom */
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
 }
 
-/* Mostrar el botón al hacer scroll hacia abajo */
-.btn-scroll-top:hover {
-  background-color: var(--texto);
+/* Clase que el JavaScript añade para mostrar los botones */
+.btn-scroll-top.is-visible,
+.btn-whatsapp.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
 }
+
+/* Estilo para el texto dentro del botón de scroll */
+.btn-scroll-top span {
+    margin-left: 0.5rem;
+}
+
+/* --- Galería de Imágenes --- */
+.gallery-item {
+    overflow: hidden; /* Para que el zoom no se salga del contenedor */
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    height: 250px; /* Altura fija para todas las imágenes */
+}
+
+.gallery-item img {
+    transition: transform 0.4s ease;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor sin deformarse */
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* --- Testimonios --- */
+.testimonial-card {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(2, 119, 189, 0.15);
+}
+
+.testimonial-icon {
+    font-size: 2.5rem;
+    color: var(--primario);
+    margin-bottom: 1rem;
+}
+
+.testimonial-text {
+    font-style: italic;
+    color: #555;
+    flex-grow: 1; /* Asegura que el texto ocupe el espacio disponible */
+    margin-bottom: 1.5rem;
+}
+
+/*
+ * =========================================
+ *  VIDEO CON BORDES DIFUMINADOS
+ * =========================================
+ */
+.video-fade {
+    /* Crea una máscara con un gradiente radial para difuminar los bordes */
+    mask-image: radial-gradient(ellipse at center, black 65%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse at center, black 65%, transparent 100%); /* Prefijo para navegadores WebKit (Chrome, Safari) */
+}
+
 
 /* responsive */
 @media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2rem;
-  }
-  .hero p {
-    font-size: 1rem;
-  }
-  .nav {
+  .navbar-nav {
     flex-direction: column;
     gap: 0.5rem;
   }
+
+  #hero-carousel .carousel-caption a.btn {
+    padding: 0.5rem 1rem;
+  }
 }
+
 @media (max-width: 576px) {
-  .hero h1 {
-    font-size: 1.5rem;
-  }
-  .hero p {
-    font-size: 0.9rem;
-  }
   .nav-link {
     font-size: 0.9rem;
   }
+
   .btn-whatsapp {
     width: 40px;
     height: 40px;
   }
+
   .btn-whatsapp i {
     font-size: 1.5rem;
   }
 }
-/* Secciones */
-section {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
-
-.bg-light {
-  background-color: var(--gris) !important;
-  /* Color de fondo claro */
-}
-
-.bg-primary {
-  background-color: var(--primario) !important;
-  /* Color de fondo primario */
-}
-
-/*# sourceMappingURL=estilos.css.map */
