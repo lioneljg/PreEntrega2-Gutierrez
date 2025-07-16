@@ -67,13 +67,13 @@ header .container {
 
 /* Hover Instagram */
 .navbar-nav .nav-item .nav-link:hover i.bi-instagram {
-  color: #e4405f; /* Color de marca */
+  color: #e4405f; /* Color de instagram */
   transform: translateY(-2px) scale(1.2); /* Efecto combinado y más sutil */
 }
 
 /* Hover Facebook */
 .navbar-nav .nav-item .nav-link:hover i.bi-facebook {
-  color: #3b5998; /* Color de marca */
+  color: #3b5998; /* Color de facebook */
   transform: translateY(-2px) scale(1.2); /* Efecto combinado y más sutil */
 }
 
@@ -152,7 +152,7 @@ h6 {
   font-size: clamp(1.8rem, calc(5vw + 0.5rem), 3rem);
 }
 
-/* Párrafos del Hero (p, .lead) */
+/* Párrafos del Hero p */
 .hero p {
   /*
    * El párrafo también usa clamp() para escalar suavemente.
@@ -411,11 +411,7 @@ textarea:focus {
     margin-bottom: 1.5rem;
 }
 
-/*
- * =========================================
- *  VIDEO CON BORDES DIFUMINADOS
- * =========================================
- */
+/* VIDEO CON BORDES DIFUMINADOS */
 .video-fade {
     /* Crea una máscara con un gradiente radial para difuminar los bordes */
     mask-image: radial-gradient(ellipse at center, black 65%, transparent 100%);

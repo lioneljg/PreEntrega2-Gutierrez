@@ -22,14 +22,12 @@
     <!-- HEADER -->
     <header class="position-absolute top-0 start-0 w-100 z-3">
         <nav class="navbar navbar-expand-lg navbar-dark">
-            <div class="container d-flex justify-content-between align-items-center">
+            <div class="container">
                 <!-- Logo -->
-                <a href="../index.html" class="logo-link">
-                    <div class="logo">
-                        <img src="../img/logo.png" alt="Logo de Hosanna" width="120" />
-                    </div>
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../img/logo.png" alt="Logo de Hosanna" width="120" />
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuHosanna">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuHosanna" aria-controls="menuHosanna" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="menuHosanna">
@@ -37,7 +35,7 @@
                         <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
                         <li class="nav-item"><a class="nav-link" href="./empresa.html">Empresa</a></li>
                         <li class="nav-item"><a class="nav-link" href="./servicios.html">Servicios</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./galeria.html">Galeria</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./galeria.html">Galería</a></li>
                         <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
                         <!-- Redes sociales dentro del menú -->
                         <li class="nav-item d-flex align-items-center ms-5">
@@ -57,7 +55,7 @@
     </header>
 
     <!-- HERO -->
-    <section class="hero" style="background-image: url('../img/empresa-banner.jpg');">
+    <section class="hero" style="background-image: url('../img/empresa.png');">
         <div class="container text-white text-end">
             <p class="lead text-info fw-semibold">TE CONTAMOS UN POCO SOBRE</p>
             <h1 class="display-4 fw-bold">NUESTRA EMPRESA</h1>
@@ -88,6 +86,106 @@
                         style="max-width: 100%; height: auto;">
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- MISION, VISION Y VALORES -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="text-primary fw-bold">NUESTROS PILARES</h2>
+                <p class="lead">Lo que nos define y nos impulsa a ser mejores cada día.</p>
+            </div>
+            <div class="row text-center g-4">
+                <!-- Misión -->
+                <div class="col-md-4">
+                    <div class="p-4 shadow-sm rounded h-100">
+                        <i class="bi bi-bullseye fs-1 text-info"></i>
+                        <h4 class="fw-bold mt-3">Misión</h4>
+                        <p>Brindar soluciones de limpieza integrales y de alta calidad que superen las expectativas de
+                            nuestros clientes, creando ambientes limpios, seguros y saludables a través de un equipo
+                            profesional y comprometido.</p>
+                    </div>
+                </div>
+                <!-- Visión -->
+                <div class="col-md-4">
+                    <div class="p-4 shadow-sm rounded h-100">
+                        <i class="bi bi-eye fs-1 text-info"></i>
+                        <h4 class="fw-bold mt-3">Visión</h4>
+                        <p>Ser la empresa de limpieza líder y de mayor confianza en la región, reconocida por nuestra
+                            excelencia, innovación y responsabilidad social, construyendo relaciones duraderas con
+                            nuestros clientes y colaboradores.</p>
+                    </div>
+                </div>
+                <!-- Valores -->
+                <div class="col-md-4">
+                    <div class="p-4 shadow-sm rounded h-100">
+                        <i class="bi bi-shield-check fs-1 text-info"></i>
+                        <h4 class="fw-bold mt-3">Valores</h4>
+                        <ul class="list-unstyled">
+                            <li><strong>Compromiso:</strong><br>Con la calidad y satisfacción del cliente.</li>
+                            <li><strong>Honestidad:</strong><br>En cada una de nuestras acciones.</li>
+                            <li><strong>Responsabilidad:</strong><br>Cuidamos tu espacio como si fuera nuestro.</li>
+                            <li><strong>Mejora continua:</strong><br>Siempre buscando innovar.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- POR QUÉ ELEGIRNOS -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="text-primary fw-bold">¿POR QUÉ ELEGIR HOSANNA?</h2>
+                <p class="lead">Te damos las razones para confiar en nuestro trabajo.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3 text-center">
+                    <div class="p-3">
+                        <i class="bi bi-people-fill display-4 text-info mb-3"></i>
+                        <h5 class="fw-bold">Personal Capacitado</h5>
+                        <p>Nuestro equipo recibe formación constante para garantizar un servicio profesional y eficiente.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 text-center">
+                    <div class="p-3">
+                        <i class="bi bi-droplet-half display-4 text-info mb-3"></i>
+                        <h5 class="fw-bold">Insumos de Calidad</h5>
+                        <p>Utilizamos productos y maquinaria de primeras marcas, seguros para las personas y el medio
+                            ambiente.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 text-center">
+                    <div class="p-3">
+                        <i class="bi bi-sliders display-4 text-info mb-3"></i>
+                        <h5 class="fw-bold">Planes a Medida</h5>
+                        <p>Nos adaptamos a tus horarios y necesidades específicas con planes de limpieza totalmente
+                            flexibles.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 text-center">
+                    <div class="p-3">
+                        <i class="bi bi-lock-fill display-4 text-info mb-3"></i>
+                        <h5 class="fw-bold">Confianza y Seguridad</h5>
+                        <p>Todo nuestro personal está debidamente registrado y cuenta con seguros, para tu total
+                            tranquilidad.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-dark text-white py-5">
+        <div class="container text-center">
+            <h3 class="text-info fw-bold">¿LISTO PARA TRANSFORMAR TU ESPACIO?</h3>
+            <p class="lead my-3">Descubrí todo lo que podemos hacer por vos. Mirá nuestros servicios o contactanos
+                directamente.</p>
+            <a href="./servicios.html" class="btn btn-primary btn-lg mt-2 mx-2">Ver Servicios</a>
+            <a href="./contacto.html" class="btn btn-outline-info btn-lg mt-2 mx-2">Pedí un Presupuesto</a>
         </div>
     </section>
 
