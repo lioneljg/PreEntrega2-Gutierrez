@@ -1,42 +1,111 @@
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+@use '../utilities/extends' as *;
+
 /* ---------- Hero ---------- */
-
-.hero h1 {
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+/* Títulos del Hero (h1, h2) */
+.hero h1,
+.hero h2 {
+    /* 
+   * Se usa clamp() para un tamaño de fuente fluido.
+   * Mínimo: 1.8rem (para móviles pequeños)
+   * Preferido: Crecerá con el ancho de la pantalla (5vw) con una base de 0.5rem.
+   * Máximo: 3rem (para pantallas grandes)
+   */
+    font-size: clamp(1.8rem, calc(5vw + 0.5rem), 3rem);
 }
 
-/* Texto del hero */
+/* Párrafos del Hero p */
 .hero p {
-    font-size: 1.2rem;
+    /*
+   * El párrafo también usa clamp() para escalar suavemente.
+   * Mínimo: 0.9rem
+   * Preferido: Escala más sutilmente que los títulos.
+   * Máximo: 1.2rem
+   */
+    font-size: clamp(0.9rem, calc(1vw + 0.7rem), 1.2rem);
+    margin-bottom: 1.5rem;
+    /* Espacio consistente debajo del párrafo */
 }
-
-/* Compensar el espacio con un margin en el hero */
 
 .hero {
     position: relative;
-    min-height: 100vh;
+    min-height: 100dvh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 1rem;
+    @include flex-center;
+    z-index: 1;
+    padding: 0;
 }
 
 .hero::before {
     content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0,
-            0,
-            0,
-            0.4);
-    /* Oscurece la imagen para que se lea el texto */
-    z-index: 1;
+    @extend %position-absolute;
+    top: 0;
+    left: 0;
+    @extend %full-width;
+    @extend %full-height;
+    z-index: 0;
+    /* Asegura que el fondo esté detrás del contenido */
 }
+
+#hero-carousel {
+    position: relative;
+    height: 100dvh !important;
+}
+
+#hero-carousel .carousel-inner,
+#hero-carousel .carousel-item,
+#hero-carousel .carousel-item img {
+    @extend %full-height;
+}
+
+#hero-carousel .carousel-item img {
+    object-fit: cover;
+    @extend %full-width;
+    filter: brightness(0.7);
+    /* Oscurece SOLO la imagen, no el header */
+}
+
+#hero-carousel .carousel-caption {
+    @extend %position-absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: $blanco;
+    border-radius: 8px;
+    /* 
+   * Se ajusta el ancho y el padding para mejorar la legibilidad
+   * en todas las pantallas. 'min' previene que el texto se extienda
+   * demasiado en pantallas anchas y '90%' asegura que no toque
+   * los bordes en las más pequeñas.
+   */
+    width: min(90%, 800px);
+    padding: clamp(1rem, 5vw, 2rem);
+}
+
+#hero-carousel>header {
+    pointer-events: none;
+}
+
+/* Hacemos que la barra de navegación sí sea clickeable */
+#hero-carousel>header .navbar {
+    pointer-events: auto;
+}
+
+#hero-carousel .carousel-caption h1,
+#hero-carousel .carousel-caption h2,
+#hero-carousel .carousel-caption p {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+
 
 .hero .container {
     position: relative;
     z-index: 2;
-    color: white;
+    color: $blanco;
+    padding: min(5em, 8%);
 }

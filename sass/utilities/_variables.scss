@@ -1,2 +1,24 @@
-$primary-color: #0277bd; // Color primario
-$blanco: #ffffff; // Color blanco para textos
+// Paleta de colores como variables de SASS
+$primario:   #0277bd;
+$secundario: #e1f5fe;
+$blanco:     #ffffff;
+$gris:       #f4f4f4;
+$texto:      #333;
+$negro:      #000000;
+$verde:      #25d366;
+
+// Mapa de Escala Tipográfica
+// Centraliza todos los tamaños de fuente para consistencia.
+$font-sizes: (
+    "sm": 0.9rem,
+    "base": 1rem,
+    "lg": 1.3rem,
+    "xl": 1.5rem,
+    "xxl": 2.5rem,
+    "h6": 1rem,
+    "h5": 1.1rem,
+    "h4": 1.3rem,
+    "h3": 1.5rem,
+    "h2": 1.8rem,
+    "h1": 2rem
+);

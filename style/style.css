@@ -1,11 +1,22 @@
 @charset "UTF-8";
+.gallery-item img, .hero::before, #hero-carousel .carousel-item img, header {
+  width: 100%;
+}
+
+.testimonial-card, .gallery-item img, .hero::before, #hero-carousel .carousel-inner,
+#hero-carousel .carousel-item,
+#hero-carousel .carousel-item img {
+  height: 100%;
+}
+
+.tooltip-ayuda, .hero::before, #hero-carousel .carousel-caption, header {
+  position: absolute;
+}
 
 /* ---------- Header personalizado ---------- */
 header {
-  position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
   z-index: 10;
   background-color: transparent !important;
   /* Fondo transparente */
@@ -37,24 +48,27 @@ header .container {
   /* Hace un pequeño "press" */
 }
 
-
 .navbar {
   background-color: transparent !important;
   /* Fondo transparente */
 }
 
 .nav-link {
-  font-weight: 500;  
-  color: var(--blanco);
-  font-size: 1.3rem; /* Aumenta el tamaño de la fuente */
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 1.3rem;
+  /* Aumenta el tamaño de la fuente */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-  transition: color 0.3s ease, transform 0.3s ease; /* Transición unificada */
-  display: inline-block; /* Necesario para que funcione el transform */
+  transition: color 0.3s ease, transform 0.3s ease;
+  /* Transición unificada */
+  display: inline-block;
+  /* Necesario para que funcione el transform */
 }
 
 .nav-link:hover {
-  color: var(--primario);
-  transform: translateY(-2px); /* Efecto de "levantamiento" sutil */
+  color: #0277bd;
+  transform: translateY(-2px);
+  /* Efecto de "levantamiento" sutil */
   /* Color primario al hacer hover */
 }
 
@@ -67,16 +81,19 @@ header .container {
 
 /* Hover Instagram */
 .navbar-nav .nav-item .nav-link:hover i.bi-instagram {
-  color: #e4405f; /* Color de instagram */
-  transform: translateY(-2px) scale(1.2); /* Efecto combinado y más sutil */
+  color: #e4405f;
+  /* Color de instagram */
+  transform: translateY(-2px) scale(1.2);
+  /* Efecto combinado y más sutil */
 }
 
 /* Hover Facebook */
 .navbar-nav .nav-item .nav-link:hover i.bi-facebook {
-  color: #3b5998; /* Color de facebook */
-  transform: translateY(-2px) scale(1.2); /* Efecto combinado y más sutil */
+  color: #3b5998;
+  /* Color de facebook */
+  transform: translateY(-2px) scale(1.2);
+  /* Efecto combinado y más sutil */
 }
-
 
 /* Reset básico para que no se rompa todo en distintos navegadores */
 * {
@@ -100,16 +117,6 @@ body {
   color: #333;
   padding-top: 0;
   /* Evita scroll horizontal */
-}
-
-/* Paleta de colores general para reutilizar codigo si es que cuenta xD */
-:root {
-  --primario: #0277bd;
-  --secundario: #e1f5fe;
-  --blanco: #ffffff;
-  --gris: #f4f4f4;
-  --azul: blue;
-  --texto: #333;
 }
 
 /* responsivo sin media queries */
@@ -137,31 +144,58 @@ h6 {
   font-size: clamp(1rem, 2vw, 1.4rem);
 }
 
+/* Secciones */
+section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
 
+.bg-light {
+  background-color: #f4f4f4;
+  /* Color de fondo claro */
+}
+
+.bg-primary {
+  background-color: #0277bd;
+  /* Color de fondo primario */
+}
+
+/* VIDEO CON BORDES DIFUMINADOS */
+.video-fade {
+  /* Crea una máscara con un gradiente radial para difuminar los bordes */
+  mask-image: radial-gradient(ellipse at center, black 65%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 65%, transparent 100%);
+}
+
+/* Footer */
+footer {
+  font-size: 0.9rem;
+}
 
 /* ---------- Hero ---------- */
 /* Títulos del Hero (h1, h2) */
 .hero h1,
 .hero h2 {
   /* 
-   * Se usa clamp() para un tamaño de fuente fluido.
-   * Mínimo: 1.8rem (para móviles pequeños)
-   * Preferido: Crecerá con el ancho de la pantalla (5vw) con una base de 0.5rem.
-   * Máximo: 3rem (para pantallas grandes)
-   */
-  font-size: clamp(1.8rem, calc(5vw + 0.5rem), 3rem);
+  * Se usa clamp() para un tamaño de fuente fluido.
+  * Mínimo: 1.8rem (para móviles pequeños)
+  * Preferido: Crecerá con el ancho de la pantalla (5vw) con una base de 0.5rem.
+  * Máximo: 3rem (para pantallas grandes)
+  */
+  font-size: clamp(1.8rem, 5vw + 0.5rem, 3rem);
 }
 
 /* Párrafos del Hero p */
 .hero p {
   /*
-   * El párrafo también usa clamp() para escalar suavemente.
-   * Mínimo: 0.9rem
-   * Preferido: Escala más sutilmente que los títulos.
-   * Máximo: 1.2rem
-   */
-  font-size: clamp(0.9rem, calc(1vw + 0.7rem), 1.2rem);
-  margin-bottom: 1.5rem; /* Espacio consistente debajo del párrafo */
+  * El párrafo también usa clamp() para escalar suavemente.
+  * Mínimo: 0.9rem
+  * Preferido: Escala más sutilmente que los títulos.
+  * Máximo: 1.2rem
+  */
+  font-size: clamp(0.9rem, 1vw + 0.7rem, 1.2rem);
+  margin-bottom: 1.5rem;
+  /* Espacio consistente debajo del párrafo */
 }
 
 .hero {
@@ -171,19 +205,16 @@ h6 {
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   z-index: 1;
   padding: 0;
 }
 
 .hero::before {
   content: "";
-  position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
   z-index: 0;
   /* Asegura que el fondo esté detrás del contenido */
 }
@@ -193,32 +224,25 @@ h6 {
   height: 100dvh !important;
 }
 
-#hero-carousel .carousel-inner,
-#hero-carousel .carousel-item,
-#hero-carousel .carousel-item img {
-  height: 100% !important;
-}
-
 #hero-carousel .carousel-item img {
   object-fit: cover;
-  width: 100%;
-  filter: brightness(0.7); /* Oscurece SOLO la imagen, no el header */
+  filter: brightness(0.7);
+  /* Oscurece SOLO la imagen, no el header */
 }
 
 #hero-carousel .carousel-caption {
-  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: #fff;
+  color: #ffffff;
   border-radius: 8px;
   /* 
-   * Se ajusta el ancho y el padding para mejorar la legibilidad
-   * en todas las pantallas. 'min' previene que el texto se extienda
-   * demasiado en pantallas anchas y '90%' asegura que no toque
-   * los bordes en las más pequeñas.
-   */
+  * Se ajusta el ancho y el padding para mejorar la legibilidad
+  * en todas las pantallas. 'min' previene que el texto se extienda
+  * demasiado en pantallas anchas y '90%' asegura que no toque
+  * los bordes en las más pequeñas.
+  */
   width: min(90%, 800px);
   padding: clamp(1rem, 5vw, 2rem);
 }
@@ -238,38 +262,12 @@ h6 {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-
-
 .hero .container {
   position: relative;
   z-index: 2;
-  color: white;
+  color: #ffffff;
   padding: min(5em, 8%);
 }
-
-/* Secciones */
-section {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
-
-.bg-light {
-  background-color: var(--gris) !important;
-  /* Color de fondo claro */
-}
-
-.bg-primary {
-  background-color: var(--primario) !important;
-  /* Color de fondo primario */
-}
-
-
-/* Footer */
-footer {
-  background-color: #222;
-  font-size: 0.9rem;
-}
-
 
 /* Animación de íconos al pasar el mouse */
 .icono-servicio {
@@ -277,11 +275,9 @@ footer {
   /* Asegura que el icono sea un bloque para aplicar transformaciones */
   transition: transform 0.3s ease;
 }
-
 .icono-servicio:hover {
   transform: scale(1.9);
-  color: var(--blanco);
-  /* Cambia el color al pasar el mouse */
+  color: #ffffff; /* Cambia el color al pasar el mouse */
 }
 
 /* Formulario de contacto */
@@ -294,17 +290,15 @@ textarea {
 
 input:focus,
 textarea:focus {
-  border-color: var(--primario);
-  outline: none;
-  box-shadow: 0 0 0 0.2rem rgba(2, 119, 189, 0.25);
-  /* Sombra azul al enfocar */
+  border-color: #0277bd;
+  box-shadow: 0 0 0 0.2rem rgba(2, 119, 189, 0.25); /* Sombra azul al enfocar */
 }
 
 /* Efecto de fade al botón flotante */
 .btn-whatsapp {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
 }
 
@@ -318,7 +312,6 @@ textarea:focus {
 
 /* Tooltip personalizado */
 .tooltip-ayuda {
-  position: absolute;
   bottom: 40px;
   left: 40px;
   background-color: #25d366;
@@ -342,82 +335,69 @@ textarea:focus {
 /* Ocultar ambos botones por defecto y prepararlos para la transición */
 .btn-scroll-top,
 .btn-whatsapp {
-    opacity: 0;
-    visibility: hidden;
-    transform: scale(0.8); /* Un pequeño efecto de zoom */
-    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.8);
+  /* Un pequeño efecto de zoom */
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
 }
 
 /* Clase que el JavaScript añade para mostrar los botones */
 .btn-scroll-top.is-visible,
 .btn-whatsapp.is-visible {
-    opacity: 1;
-    visibility: visible;
-    transform: scale(1);
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
 }
 
 /* Estilo para el texto dentro del botón de scroll */
 .btn-scroll-top span {
-    margin-left: 0.5rem;
+  margin-left: 0.5rem;
 }
 
 /* --- Galería de Imágenes --- */
 .gallery-item {
-    overflow: hidden; /* Para que el zoom no se salga del contenedor */
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    height: 250px; /* Altura fija para todas las imágenes */
+  overflow: hidden; /* Para que el zoom no se salga del contenedor */
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 250px; /* Altura fija para todas las imágenes */
 }
-
 .gallery-item img {
-    transition: transform 0.4s ease;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Asegura que la imagen cubra el contenedor sin deformarse */
+  transition: transform 0.4s ease;
+  object-fit: cover; /* Asegura que la imagen cubra el contenedor sin deformarse */
 }
-
 .gallery-item:hover img {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 /* --- Testimonios --- */
 .testimonial-card {
-    background-color: #ffffff;
-    padding: 2rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .testimonial-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 25px rgba(2, 119, 189, 0.15);
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(2, 119, 189, 0.15);
 }
 
 .testimonial-icon {
-    font-size: 2.5rem;
-    color: var(--primario);
-    margin-bottom: 1rem;
+  font-size: 2.5rem;
+  color: #0277bd;
+  margin-bottom: 1rem;
 }
 
 .testimonial-text {
-    font-style: italic;
-    color: #555;
-    flex-grow: 1; /* Asegura que el texto ocupe el espacio disponible */
-    margin-bottom: 1.5rem;
+  font-style: italic;
+  color: #555;
+  flex-grow: 1; /* Asegura que el texto ocupe el espacio disponible */
+  margin-bottom: 1.5rem;
 }
-
-/* VIDEO CON BORDES DIFUMINADOS */
-.video-fade {
-    /* Crea una máscara con un gradiente radial para difuminar los bordes */
-    mask-image: radial-gradient(ellipse at center, black 65%, transparent 100%);
-    -webkit-mask-image: radial-gradient(ellipse at center, black 65%, transparent 100%); /* Prefijo para navegadores WebKit (Chrome, Safari) */
-}
-
 
 /* responsive */
 @media (max-width: 768px) {
@@ -425,11 +405,9 @@ textarea:focus {
     flex-direction: column;
     gap: 0.5rem;
   }
-
   #hero-carousel .carousel-caption a.btn {
     padding: 0.5rem 1rem;
   }
-
   /* Hacemos que los enlaces del menú ocupen todo el ancho y tengan más padding para mejorar la zona de toque */
   .navbar .nav-link {
     display: block; /* Hace que el enlace ocupe todo el ancho de su contenedor */
@@ -438,18 +416,17 @@ textarea:focus {
     padding-bottom: 0.75rem; /* Aumenta el espacio táctil vertical */
   }
 }
-
 @media (max-width: 576px) {
   .nav-link {
     font-size: 0.9rem;
   }
-
   .btn-whatsapp {
     width: 40px;
     height: 40px;
   }
-
   .btn-whatsapp i {
     font-size: 1.5rem;
   }
 }
+
+/*# sourceMappingURL=style.css.map */

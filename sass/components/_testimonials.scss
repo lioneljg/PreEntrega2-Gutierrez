@@ -1,0 +1,36 @@
+@use '../utilities/variables' as *;
+@use '../utilities/extends' as *;
+@use '../utilities/functions' as *;
+
+
+
+/* --- Testimonios --- */
+.testimonial-card {
+    background-color: $blanco;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    @extend %full-height;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 25px rgba(2, 119, 189, 0.15);
+    }
+}
+
+.testimonial-icon {
+    font-size: font-size("xxl");
+    color: $primario;
+    margin-bottom: 1rem;
+}
+
+.testimonial-text {
+    font-style: italic;
+    color: #555;
+    flex-grow: 1; /* Asegura que el texto ocupe el espacio disponible */
+    margin-bottom: 1.5rem;
+}

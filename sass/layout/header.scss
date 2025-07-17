@@ -1,9 +1,13 @@
+@use '../utilities/variables' as *;
+@use '../utilities/extends' as *;
+@use '../utilities/functions' as *;
+
 /* ---------- Header personalizado ---------- */
 header {
-    position: absolute;
+    @extend %position-absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    @extend %full-width;
     z-index: 10;
     background-color: transparent !important;
     /* Fondo transparente */
@@ -11,42 +15,74 @@ header {
     /* Sombra sutil */
 }
 
+header .container {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-top: 0 !important;
+}
+
 /* Logo  y animacion */
 .logo {
-    transition: transform 0.3s ease, filter 0.3s ease; /* Animación suave */
+    transition: transform 0.3s ease, filter 0.3s ease;
+    /* Animación suave */
 }
 
 .logo:hover {
-    transform: scale(1.1); /* Aumenta el tamaño al hacer hover */
-    filter: brightness(1.2); /* Aumenta el brillo */
+    transform: scale(1.5);
+    /* Aumenta el tamaño al hacer hover */
+    filter: brightness(1.2);
+    /* Aumenta el brillo */
 }
 
+.logo:active {
+    transform: scale(0.95);
+    /* Hace un pequeño "press" */
+}
+
+
+.navbar {
+    background-color: transparent !important;
+    /* Fondo transparente */
+}
 
 .nav-link {
     font-weight: 500;
-    transition: color 0.3s ease;
+    color: $blanco;
+    font-size: font-size("lg");
+    /* Aumenta el tamaño de la fuente */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    transition: color 0.3s ease, transform 0.3s ease;
+    /* Transición unificada */
+    display: inline-block;
+    /* Necesario para que funcione el transform */
 }
 
 .nav-link:hover {
-    color: var(--primario);
+    color: $primario;
+    transform: translateY(-2px);
+    /* Efecto de "levantamiento" sutil */
     /* Color primario al hacer hover */
 }
 
-/* Iconos del navbar con color personalizado al hacer hover */
-.navbar-nav .nav-item .nav-link i.bi-instagram {
-    transition: color 0.3s ease;
-}
-
+/* Transición y escala para los íconos */
+.navbar-nav .nav-item .nav-link i.bi-instagram,
 .navbar-nav .nav-item .nav-link i.bi-facebook {
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
 }
 
+/* Hover Instagram */
 .navbar-nav .nav-item .nav-link:hover i.bi-instagram {
     color: #e4405f;
-    /* Color de Instagram */
+    /* Color de instagram */
+    transform: translateY(-2px) scale(1.2);
+    /* Efecto combinado y más sutil */
 }
 
+/* Hover Facebook */
 .navbar-nav .nav-item .nav-link:hover i.bi-facebook {
     color: #3b5998;
-    /* Color de Facebook */
+    /* Color de facebook */
+    transform: translateY(-2px) scale(1.2);
+    /* Efecto combinado y más sutil */
 }

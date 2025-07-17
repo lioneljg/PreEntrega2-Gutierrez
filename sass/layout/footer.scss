@@ -1,5 +1,8 @@
+@use '../utilities/variables' as *;
+@use '../utilities/extends' as *;
+@use '../utilities/functions' as *;
+
 /* Footer */
 footer {
-    background-color: #222;
-    font-size: 0.9rem;
+    font-size: font-size("sm");
 }

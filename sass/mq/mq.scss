@@ -1,38 +1,40 @@
+@use '../utilities/extends' as *;
+@use '../utilities/functions' as *;
+@use '../utilities/variables' as *;
+
 /* responsive */
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    .nav {
+    .navbar-nav {
         flex-direction: column;
         gap: 0.5rem;
+    }
+
+    #hero-carousel .carousel-caption a.btn {
+        padding: 0.5rem 1rem;
+    }
+
+    /* Hacemos que los enlaces del menú ocupen todo el ancho y tengan más padding para mejorar la zona de toque */
+    .navbar {
+        .nav-link {
+            display: block; /* Hace que el enlace ocupe todo el ancho de su contenedor */
+            width: 100%;
+            padding-top: 0.75rem; /* Aumenta el espacio táctil vertical */
+            padding-bottom: 0.75rem; /* Aumenta el espacio táctil vertical */
+        }
     }
 }
 
 @media (max-width: 576px) {
-    .hero h1 {
-        font-size: 1.5rem;
-    }
-
-    .hero p {
-        font-size: 0.9rem;
-    }
-
     .nav-link {
-        font-size: 0.9rem;
+        font-size: font-size("sm");
     }
-
+    
     .btn-whatsapp {
         width: 40px;
         height: 40px;
-    }
-
-    .btn-whatsapp i {
-        font-size: 1.5rem;
+        
+        i {
+            font-size: font-size("xl");
+        }
     }
 }

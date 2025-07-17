@@ -1,0 +1,12 @@
+@use "sass:map";
+@use "variables" as *;
+
+// Función para obtener un tamaño de fuente desde el mapa $font-sizes.
+// Ej: font-size(lg) -> 1.3rem
+@function font-size($key: "base") {
+    @if not map.has-key($font-sizes, $key) {
+        @error "La clave '#{$key}' no existe en el mapa $font-sizes.";
+    }
+
+    @return map.get($font-sizes, $key);
+}

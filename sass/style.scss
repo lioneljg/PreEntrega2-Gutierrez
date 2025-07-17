@@ -1,53 +1,20 @@
-@use 'utilities/variables.scss';
-@use 'utilities/mixins.scss';
-@use 'utilities/extends.scss';
-// Importar utilidades
-@use 'layout/header.scss';
-@use 'layout/main.scss';
-@use 'layout/footer.scss';
-@use 'layout/hero.scss';
-@use 'layout/services.scss';
-@use 'layout/contact.scss';
-@use 'layout/whatsapp.scss';
-@use 'layout/scroll-top.scss';
-@use 'layout/social-media.scss';
-// Importar layout
-@use 'mq/mq.scss'; // Importar media queries
+@use 'utilities/variables' as *;
+@use 'utilities/mixins' as *;
+@use 'utilities/extends';
+@use 'utilities/functions' as *;
 
+// 2. Layout (Estructura principal de la página)
+@use 'layout/header';
+@use 'layout/main';
+@use 'layout/footer';
+@use 'layout/hero';
+@use 'layout/services';
+@use 'layout/contact';
+@use 'layout/floating-buttons';
 
+// 3. Componentes (Elementos reutilizables)
+@use 'components/gallery';
+@use 'components/testimonials';
 
-
-
-
-/* Secciones */
-section {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-}
-
-.bg-light {
-    background-color: var(--gris) !important;
-    /* Color de fondo claro */
-}
-
-.bg-primary {
-    background-color: var(--primario) !important;
-    /* Color de fondo primario */
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// 4. Media Queries
+@use 'mq/mq';

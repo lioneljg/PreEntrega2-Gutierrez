@@ -1,3 +1,6 @@
+@use '../utilities/variables' as *;
+@use '../utilities/extends' as *;
+
 /* Reset básico para que no se rompa todo en distintos navegadores */
 * {
     margin: 0;
@@ -5,26 +8,47 @@
     box-sizing: border-box;
 }
 
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
 
 /* Estilo general del body, tipografía y color de fondo */
 body {
     font-family: "Segoe UI", sans-serif;
     line-height: 1.6;
-    background-color: #ffffff;
-    color: #333;
-    overflow-x: hidden;
+    background-color: $blanco;
+    color: $texto;
+    padding-top: 0;
     /* Evita scroll horizontal */
 }
-
-/* Paleta de colores general para reutilizar codigo si es que cuenta xD */
-:root {
-    --primario: #0277bd;
-    --secundario: #e1f5fe;
-    --blanco: #ffffff;
-    --gris: #f4f4f4;
-    --azul: blue;
-    --texto: #333;
+/* responsivo sin media queries */
+h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
 }
+
+h2 {
+    font-size: clamp(1.8rem, 4.5vw, 3rem);
+}
+
+h3 {
+    font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+}
+
+h4 {
+    font-size: clamp(1.3rem, 3vw, 2rem);
+}
+
+h5 {
+    font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+}
+
+h6 {
+    font-size: clamp(1rem, 2vw, 1.4rem);
+}
+
 
 
 /* Secciones */
@@ -34,22 +58,18 @@ section {
 }
 
 .bg-light {
-    background-color: var(--gris) !important;
+    background-color: $gris;
     /* Color de fondo claro */
 }
 
 .bg-primary {
-    background-color: var(--primario) !important;
+    background-color: $primario;
     /* Color de fondo primario */
 }
 
-/* Tarjetas de servicio */
-.card-title {
-    color: var(--primario);
-    font-weight: bold;
-}
-
-.card-text {
-    font-size: 0.95rem;
-    color: #555;
+/* VIDEO CON BORDES DIFUMINADOS */
+.video-fade {
+    /* Crea una máscara con un gradiente radial para difuminar los bordes */
+    mask-image: radial-gradient(ellipse at center, black 65%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse at center, black 65%, transparent 100%);
 }

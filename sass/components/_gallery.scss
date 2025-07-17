@@ -1,0 +1,22 @@
+
+@use '../utilities/extends' as *;
+@use '../utilities/variables' as *;
+
+/* --- Galería de Imágenes --- */
+.gallery-item {
+    overflow: hidden; /* Para que el zoom no se salga del contenedor */
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 250px; /* Altura fija para todas las imágenes */
+
+    img {
+        transition: transform 0.4s ease;
+        @extend %full-width;
+        @extend %full-height;
+        object-fit: cover; /* Asegura que la imagen cubra el contenedor sin deformarse */
+    }
+
+    &:hover img {
+        transform: scale(1.1);
+    }
+}

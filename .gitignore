@@ -1,0 +1,36 @@
+# Node modules
+node_modules/
+
+# Build output and dependencies
+dist/
+build/
+
+# Sass cache
+.sass-cache/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Env files
+.env
+.env.*
+
+# Compiled CSS maps
+*.css.map
+
+# VSCode settings
+.vscode/
+
+# Mac system files
+._*
+
+# Windows system files
+Desktop.ini
+
+# Otros archivos temporales
+*.tmp
+*.swp
