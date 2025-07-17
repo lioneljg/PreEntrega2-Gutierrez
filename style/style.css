@@ -429,6 +429,14 @@ textarea:focus {
   #hero-carousel .carousel-caption a.btn {
     padding: 0.5rem 1rem;
   }
+
+  /* Hacemos que los enlaces del menú ocupen todo el ancho y tengan más padding para mejorar la zona de toque */
+  .navbar .nav-link {
+    display: block; /* Hace que el enlace ocupe todo el ancho de su contenedor */
+    width: 100%;
+    padding-top: 0.75rem; /* Aumenta el espacio táctil vertical */
+    padding-bottom: 0.75rem; /* Aumenta el espacio táctil vertical */
+  }
 }
 
 @media (max-width: 576px) {
