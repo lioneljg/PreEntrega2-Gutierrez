@@ -1,0 +1,47 @@
+/* Mejoras para breadcrumbs - Hosanna */
+
+/* Estilos base para breadcrumbs */
+.breadcrumb {
+    background: transparent;
+    padding: 0.5rem 0;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: ">";
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0 0.5rem;
+}
+
+.breadcrumb-item a {
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.breadcrumb-item a:hover {
+    opacity: 0.8;
+    color: white !important;
+}
+
+.breadcrumb-item.active {
+    font-weight: 600;
+    color: white !important;
+}
+
+
+
+/* Mejoras para breadcrumbs en hero sections */
+.hero .breadcrumb {
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+.hero .breadcrumb-item a {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.hero .breadcrumb-item.active {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+} 

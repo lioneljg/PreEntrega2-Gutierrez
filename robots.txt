@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://hosanna-limpieza.com/sitemap.xml
+Sitemap: https://hosannalimpieza.com/sitemap.xml
 
 # Crawl-delay
 Crawl-delay: 1

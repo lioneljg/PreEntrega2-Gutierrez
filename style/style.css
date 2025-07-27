@@ -167,6 +167,31 @@ section {
   -webkit-mask-image: radial-gradient(ellipse at center, black 65%, transparent 100%);
 }
 
+/* Breadcrumbs */
+.breadcrumb {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: ">";
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.breadcrumb-item a {
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.breadcrumb-item a:hover {
+  opacity: 0.8;
+}
+
+.breadcrumb-item.active {
+  font-weight: 600;
+}
+
 /* Footer */
 footer {
   font-size: 0.9rem;
@@ -399,23 +424,135 @@ textarea:focus {
   margin-bottom: 1.5rem;
 }
 
-/* responsive */
+/* Mejoras para breadcrumbs - Hosanna */
+/* Estilos base para breadcrumbs */
+.breadcrumb {
+  background: transparent;
+  padding: 0.5rem 0;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: ">";
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 0.5rem;
+}
+
+.breadcrumb-item a {
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.breadcrumb-item a:hover {
+  opacity: 0.8;
+  color: white !important;
+}
+
+.breadcrumb-item.active {
+  font-weight: 600;
+  color: white !important;
+}
+
+/* Mejoras para breadcrumbs en hero sections */
+.hero .breadcrumb {
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+.hero .breadcrumb-item a {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.hero .breadcrumb-item.active {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== MEDIA QUERIES - HOSANNA ===== */
+/* ===== TABLETS (769px - 1024px) ===== */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .breadcrumb {
+    font-size: 0.85rem;
+  }
+}
+/* ===== MOBILES (max-width: 768px) ===== */
 @media (max-width: 768px) {
+  /* ===== BODY Y HTML ===== */
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden !important;
+  }
+  html {
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden !important;
+  }
+  * {
+    box-sizing: border-box !important;
+  }
+  /* ===== HEADER ===== */
+  header {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 1000 !important;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), transparent) !important;
+    padding: 0.5rem 0 !important;
+  }
+  .navbar {
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .navbar .container {
+    padding: 0 1rem !important;
+    margin: 0 !important;
+  }
+  /* ===== NAVEGACIÓN ===== */
   .navbar-nav {
     flex-direction: column;
     gap: 0.5rem;
   }
+  .navbar .nav-link {
+    display: block;
+    width: 100%;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
   #hero-carousel .carousel-caption a.btn {
     padding: 0.5rem 1rem;
   }
-  /* Hacemos que los enlaces del menú ocupen todo el ancho y tengan más padding para mejorar la zona de toque */
-  .navbar .nav-link {
-    display: block; /* Hace que el enlace ocupe todo el ancho de su contenedor */
-    width: 100%;
-    padding-top: 0.75rem; /* Aumenta el espacio táctil vertical */
-    padding-bottom: 0.75rem; /* Aumenta el espacio táctil vertical */
+  /* ===== HERO SECTION ===== */
+  #hero-carousel {
+    height: 100vh;
+  }
+  #hero-carousel .carousel-inner {
+    height: 100vh;
+  }
+  #hero-carousel .carousel-item {
+    height: 100vh;
+  }
+  #hero-carousel .carousel-item img {
+    height: 100vh;
+    object-fit: cover;
+  }
+  /* ===== BREADCRUMBS ===== */
+  .breadcrumb {
+    font-size: 0.8rem;
+    padding: 0.25rem 0;
+    justify-content: center;
+  }
+  .breadcrumb-item + .breadcrumb-item::before {
+    margin: 0 0.25rem;
+  }
+  .breadcrumb-item {
+    margin: 0 0.25rem;
   }
 }
+/* ===== SMALL MOBILES (max-width: 576px) ===== */
 @media (max-width: 576px) {
   .nav-link {
     font-size: 0.9rem;

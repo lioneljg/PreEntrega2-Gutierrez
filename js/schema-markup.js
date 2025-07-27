@@ -13,9 +13,9 @@ function insertSchemaMarkup() {
             "@type": "LocalBusiness",
             "name": "Hosanna Servicios de Limpieza",
             "description": "Servicios de limpieza profesional para oficinas, consorcios, eventos e industrias",
-            "url": "https://hosanna-limpieza.com",
-            "logo": "https://hosanna-limpieza.com/img/logo.png",
-            "image": "https://hosanna-limpieza.com/img/logo.png",
+                    "url": "https://hosannalimpieza.com",
+        "logo": "https://hosannalimpieza.com/img/logo.png",
+        "image": "https://hosannalimpieza.com/img/logo.png",
             "telephone": "+54-11-5796-6449",
             "email": "info@hosannalimpieza.com",
             "address": {
@@ -64,8 +64,8 @@ function insertSchemaMarkup() {
             "@type": "Organization",
             "name": "Hosanna Servicios de Limpieza",
             "description": "Empresa líder en servicios de limpieza profesional con más de 2 años de experiencia",
-            "url": "https://hosanna-limpieza.com",
-            "logo": "https://hosanna-limpieza.com/img/logo.png",
+                    "url": "https://hosannalimpieza.com",
+        "logo": "https://hosannalimpieza.com/img/logo.png",
             "foundingDate": "2022",
             "numberOfEmployees": "20",
             "address": {
@@ -139,7 +139,7 @@ function insertSchemaMarkup() {
             "@type": "ContactPage",
             "name": "Contacto Hosanna Servicios de Limpieza",
             "description": "Página de contacto para servicios de limpieza profesional",
-            "url": "https://hosanna-limpieza.com/contacto",
+            "url": "https://hosannalimpieza.com/contacto",
             "mainEntity": {
                 "@type": "LocalBusiness",
                 "name": "Hosanna Servicios de Limpieza",
@@ -171,18 +171,18 @@ function insertSchemaMarkup() {
             "@type": "ImageGallery",
             "name": "Galería de Trabajos Hosanna",
             "description": "Galería de trabajos de limpieza profesional realizados por Hosanna",
-            "url": "https://hosanna-limpieza.com/galeria",
+            "url": "https://hosannalimpieza.com/galeria",
             "publisher": {
                 "@type": "Organization",
                 "name": "Hosanna Servicios de Limpieza"
             },
             "image": [
-                "https://hosanna-limpieza.com/img/teamhosanna.jpg",
-                "https://hosanna-limpieza.com/img/galeria1.jpg",
-                "https://hosanna-limpieza.com/img/fondo-limpieza3.png",
-                "https://hosanna-limpieza.com/img/fondo-limpieza.png",
-                "https://hosanna-limpieza.com/img/fondo-limpieza5.png",
-                "https://hosanna-limpieza.com/img/fondo-limpieza2.png"
+                            "https://hosannalimpieza.com/img/teamhosanna.jpg",
+            "https://hosannalimpieza.com/img/galeria1.jpg",
+            "https://hosannalimpieza.com/img/fondo-limpieza3.png",
+            "https://hosannalimpieza.com/img/fondo-limpieza.png",
+            "https://hosannalimpieza.com/img/fondo-limpieza5.png",
+            "https://hosannalimpieza.com/img/fondo-limpieza2.png"
             ]
         };
     }

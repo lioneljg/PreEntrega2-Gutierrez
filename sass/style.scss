@@ -16,5 +16,8 @@
 @use 'components/gallery';
 @use 'components/testimonials';
 
-// 4. Media Queries
+// 4. Mejoras de responsividad
+@use 'layout/breadcrumb-improvements';
+
+// 5. Media Queries (Siempre al final para prioridad)
 @use 'mq/mq';
