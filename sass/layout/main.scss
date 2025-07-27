@@ -73,3 +73,28 @@ section {
     mask-image: radial-gradient(ellipse at center, black 65%, transparent 100%);
     -webkit-mask-image: radial-gradient(ellipse at center, black 65%, transparent 100%);
 }
+
+/* Breadcrumbs */
+.breadcrumb {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: ">";
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.breadcrumb-item a {
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.breadcrumb-item a:hover {
+    opacity: 0.8;
+}
+
+.breadcrumb-item.active {
+    font-weight: 600;
+}

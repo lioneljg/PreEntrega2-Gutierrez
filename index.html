@@ -4,16 +4,46 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hosanna Servicios de limpieza</title>
-    <meta name="description"
-        content="Hosanna es una empresa dedicada a brindar servicios de limpieza profesional para oficinas, locales comerciales, eventos y más. Contamos con personal capacitado y maquinaria de última tecnología." />
-
+    
+    <!-- SEO Meta Tags -->
+    <title>Hosanna Servicios de Limpieza Profesional | Oficinas, Consorcios, Eventos</title>
+    <meta name="description" content="Hosanna es una empresa líder en servicios de limpieza profesional. Ofrecemos limpieza de oficinas, consorcios, eventos, industrias y más. Personal capacitado y maquinaria de última tecnología. ¡Solicitá tu presupuesto gratis!" />
+    <meta name="keywords" content="limpieza profesional, servicios de limpieza, limpieza de oficinas, limpieza de consorcios, limpieza de eventos, limpieza industrial, empresa de limpieza, Buenos Aires" />
+    <meta name="author" content="Hosanna Servicios de Limpieza" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="Spanish" />
+    <meta name="revisit-after" content="7 days" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://hosanna-limpieza.com/" />
+    <meta property="og:title" content="Hosanna Servicios de Limpieza Profesional" />
+    <meta property="og:description" content="Servicios de limpieza profesional para oficinas, consorcios, eventos e industrias. Personal capacitado y maquinaria de última tecnología." />
+    <meta property="og:image" content="https://hosanna-limpieza.com/img/logo.png" />
+    <meta property="og:site_name" content="Hosanna Servicios de Limpieza" />
+    <meta property="og:locale" content="es_AR" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://hosanna-limpieza.com/" />
+    <meta property="twitter:title" content="Hosanna Servicios de Limpieza Profesional" />
+    <meta property="twitter:description" content="Servicios de limpieza profesional para oficinas, consorcios, eventos e industrias." />
+    <meta property="twitter:image" content="https://hosanna-limpieza.com/img/logo.png" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://hosanna-limpieza.com/" />
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/png" />
+    <link rel="apple-touch-icon" href="favicon.ico" />
+    
+    <!-- Preconnect para mejorar performance -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
-    <!-- Favicon -->
-    <link rel="icon" href="favicon.ico" type="image/png" />
 
     <!-- CSS linkeado -->
     <link rel="stylesheet" href="style/style.css" />
@@ -44,7 +74,7 @@
                             <li class="nav-item"><a class="nav-link" href="./index.html">Inicio</a></li>
                             <li class="nav-item"><a class="nav-link" href="./pages/empresa.html">Empresa</a></li>
                             <li class="nav-item"><a class="nav-link" href="./pages/servicios.html">Servicios</a></li>
-                            <li class="nav-item"><a class="nav-link" href="./pages/galeria.html">Galeria</a></li>
+                            <li class="nav-item"><a class="nav-link" href="./pages/galeria.html">Galería</a></li>
                             <li class="nav-item"><a class="nav-link" href="./pages/contacto.html">Contacto</a></li>
                             <!-- Redes sociales dentro del menú -->
                             <li class="nav-item d-flex align-items-center ms-5">
@@ -332,9 +362,16 @@
 
 
     <!-- FOOTER -->
-    <footer class="bg-primary text-white text-center py-3 footer-observado">
+    <footer class="bg-primary text-white text-center py-3 footer-observado" itemscope itemtype="https://schema.org/Organization">
         <div class="container">
             <p class="mb-0">&copy; Hosanna 2025 - Todos los derechos reservados.</p>
+            <div class="mt-2">
+                <small>
+                    <span itemprop="name">Hosanna Servicios de Limpieza</span> | 
+                    <span itemprop="telephone">+54-11-5796-6449</span> | 
+                    <span itemprop="email">info@hosannalimpieza.com</span>
+                </small>
+            </div>
         </div>
     </footer>
     <!-- Fin, sitio by Lionel Gutierrez -->
@@ -348,6 +385,8 @@
     <script src="js/floating-buttons.js"></script>
     <script src="js/counter-up.js"></script>
 
+    <!-- Schema.org markup para Google -->
+    <script src="js/schema-markup.js"></script>
 
 </body>
 

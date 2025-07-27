@@ -4,14 +4,43 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contacto | Hosanna</title>
-
+    
+    <!-- SEO Meta Tags -->
+    <title>Contacto Hosanna | Servicios de Limpieza Profesional | Buenos Aires</title>
+    <meta name="description" content="Contactá con Hosanna para servicios de limpieza profesional. Presupuesto gratis, atención personalizada. WhatsApp: +54-11-5796-6449. Servicios en Buenos Aires." />
+    <meta name="keywords" content="contacto limpieza, presupuesto limpieza, servicios de limpieza Buenos Aires, WhatsApp limpieza, empresa de limpieza contacto" />
+    <meta name="author" content="Hosanna Servicios de Limpieza" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="Spanish" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://hosanna-limpieza.com/contacto" />
+    <meta property="og:title" content="Contacto Hosanna | Servicios de Limpieza Profesional" />
+    <meta property="og:description" content="Contactá con Hosanna para servicios de limpieza profesional. Presupuesto gratis, atención personalizada." />
+    <meta property="og:image" content="https://hosanna-limpieza.com/img/logo.png" />
+    <meta property="og:site_name" content="Hosanna Servicios de Limpieza" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://hosanna-limpieza.com/contacto" />
+    <meta property="twitter:title" content="Contacto Hosanna | Servicios de Limpieza Profesional" />
+    <meta property="twitter:description" content="Contactá con Hosanna para servicios de limpieza profesional. Presupuesto gratis." />
+    <meta property="twitter:image" content="https://hosanna-limpieza.com/img/logo.png" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://hosanna-limpieza.com/contacto" />
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../favicon.ico" type="image/png" />
+    <link rel="apple-touch-icon" href="../favicon.ico" />
+    
+    <!-- Preconnect para mejorar performance -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
-    <!-- Favicon -->
-    <link rel="icon" href="../favicon.ico" type="image/png" />
 
     <!-- CSS linkeado -->
     <link rel="stylesheet" href="../style/style.css" />
@@ -39,7 +68,7 @@
                         <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
                         <li class="nav-item"><a class="nav-link" href="./empresa.html">Empresa</a></li>
                         <li class="nav-item"><a class="nav-link" href="./servicios.html">Servicios</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./galeria.html">Galeria</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./galeria.html">Galería</a></li>
                         <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
                         <!-- Redes sociales dentro del menú -->
                         <li class="nav-item d-flex align-items-center ms-5">
@@ -72,54 +101,62 @@
         <div class="container">
             <h3 class="text-center text-primary fw-bold mb-4">COMPLETÁ EL FORMULARIO Y EN BREVE NOS COMUNICAREMOS CON
                 VOS</h3>
-            <form action="https://formsubmit.co/hosannalimpieza@gmail.com" method="POST" class="row g-3 mx-auto"
+            <form action="https://formsubmit.co/info@hosannalimpieza.com" method="POST" class="row g-3 mx-auto"
                 style="max-width: 800px;">
                 <!-- Campos ocultos para FormSubmit -->
-                <input type="hidden" name="_next"
-                    value="https://lioneljg.github.io/PreEntrega2-Gutierrez/pages/agradecimiento.html">
+                <input type="hidden" name="_next" value="https://hosanna-limpieza.com/pages/agradecimiento.html">
                 <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_subject" value="Nuevo mensaje de contacto - Hosanna">
+                <input type="hidden" name="_template" value="table">
 
                 <div class="col-md-6">
-                    <input type="text" name="nombre" class="form-control" placeholder="Nombre" required>
+                    <input type="text" name="nombre" class="form-control" placeholder="Nombre" required minlength="2" maxlength="50">
                 </div>
                 <div class="col-md-6">
-                    <input type="text" name="apellido" class="form-control" placeholder="Apellido" required>
+                    <input type="text" name="apellido" class="form-control" placeholder="Apellido" required minlength="2" maxlength="50">
                 </div>
                 <div class="col-md-6">
-                    <input type="tel" name="telefono" class="form-control" placeholder="Teléfono">
+                    <input type="tel" name="telefono" class="form-control" placeholder="Teléfono" pattern="[0-9+\-\s\(\)]+" title="Ingresa un número de teléfono válido">
                 </div>
                 <div class="col-md-6">
                     <input type="email" name="email" class="form-control" placeholder="Correo electrónico" required>
                 </div>
                 <div class="col-12">
-                    <textarea name="mensaje" class="form-control" rows="5" placeholder="Mensaje" required></textarea>
+                    <textarea name="mensaje" class="form-control" rows="5" placeholder="Mensaje" required minlength="10" maxlength="1000"></textarea>
                 </div>
                 <div class="col-12">
-                    <label class="form-label text-primary">¿En qué producto estás interesado?</label>
-                    <select name="interes" class="form-select">
-                        <option selected disabled>Seleccionar</option>
-                        <option>Limpieza</option>
-                        <option>Desinfección</option>
-                        <option>Consorcios</option>
+                    <label class="form-label text-primary">¿En qué servicio estás interesado?</label>
+                    <select name="interes" class="form-select" required>
+                        <option value="" selected disabled>Seleccionar servicio</option>
+                        <option value="Limpieza de Oficinas">Limpieza de Oficinas</option>
+                        <option value="Limpieza de Consorcios">Limpieza de Consorcios</option>
+                        <option value="Limpieza de Eventos">Limpieza de Eventos</option>
+                        <option value="Limpieza Industrial">Limpieza Industrial</option>
+                        <option value="Final de Obra">Final de Obra</option>
+                        <option value="Otro">Otro</option>
                     </select>
                 </div>
                 <div class="col-12">
                     <label class="form-label text-primary">¿Por dónde nos conociste?</label><br>
                     <div class="form-check form-check-inline">
-                        <input name="conocido_por" class="form-check-input" type="checkbox" value="Internet">
-                        <label class="form-check-label">Internet</label>
+                        <input name="conocido_por[]" class="form-check-input" type="checkbox" value="Búsqueda en Google">
+                        <label class="form-check-label">Búsqueda en Google</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input name="conocido_por" class="form-check-input" type="checkbox" value="Publicidad">
+                        <input name="conocido_por[]" class="form-check-input" type="checkbox" value="Redes Sociales">
+                        <label class="form-check-label">Redes Sociales</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input name="conocido_por[]" class="form-check-input" type="checkbox" value="Recomendación">
+                        <label class="form-check-label">Recomendación</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input name="conocido_por[]" class="form-check-input" type="checkbox" value="Publicidad">
                         <label class="form-check-label">Publicidad</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input name="conocido_por" class="form-check-input" type="checkbox" value="Redes">
-                        <label class="form-check-label">Redes</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input name="conocido_por" class="form-check-input" type="checkbox" value="Recomendación">
-                        <label class="form-check-label">Recomendación</label>
+                        <input name="conocido_por[]" class="form-check-input" type="checkbox" value="Otro">
+                        <label class="form-check-label">Otro</label>
                     </div>
                 </div>
                 <div class="col-12 text-center">
@@ -151,7 +188,7 @@
                     <h5 class="text-primary">INFORMACIÓN DE CONTACTO</h5>
                     <p>Matheu 744 1219 Buenos Aires, Argentina</p>
                     <p>+54 1157966449</p>
-                    <p>hosannalimpieza@gmail.com</p>
+                    <p>info@hosannalimpieza.com</p>
                 </div>
             </div>
         </div>
@@ -189,6 +226,10 @@
 
     <!-- Custom JS -->
     <script src="../js/floating-buttons.js"></script>
+    <script src="../js/form-validation.js"></script>
+
+    <!-- Schema.org markup para Google -->
+    <script src="../js/schema-markup.js"></script>
 </body>
 
 </html>
